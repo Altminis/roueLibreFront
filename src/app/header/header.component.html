@@ -1,22 +1,26 @@
-<header class="navbar">
-  <section class="navbar-section">
-    <a href="#" class="btn btn-link">Accueil</a>
-    <a href="#" class="btn btn-link">Examples</a>
-  </section>
-  <section class="navbar-center">
-    <a href="#"><img src="../../../Images/Logo.png" alt="logo"> </a>
-  </section>
-  <section class="navbar-section">
-    <div *ngIf="!isConnected">
-      <a href="#" class="btn btn-link">Connection</a>
-      <a href="#" class="btn btn-link">Inscription</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <a class="navbar-brand" href="#">
+    <!--<img src="../../../Images/Logo.png" width="30" height="30" class="d-inline-block align-top" alt="logo">-->
+    RoueLibre</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">Accueil <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">Examples</a>
+      <div *ngIf="!isConnected">
+        <a class="nav-item nav-link" href="#">Connection</a>
+        <a class="nav-item nav-link" href="#">Inscription</a>
+      </div>
+      <div *ngIf="isConnected">
+        <button class="nav-item nav-link" [matMenuTriggerFor]="menu">Mon Compte</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Mon Profil</button>
+          <button mat-menu-item>Mes Orders</button>
+        </mat-menu>
+      </div>
     </div>
-    <div *ngIf="isConnected">
-      <button class="btn btn-link" [matMenuTriggerFor]="menu">Mon Compte</button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>Mon Profil</button>
-        <button mat-menu-item>Mes Orders</button>
-      </mat-menu>
-    </div>
-  </section>
-</header>
+  </div>
+</nav>
