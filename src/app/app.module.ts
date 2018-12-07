@@ -15,6 +15,7 @@ import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TestComponent } from './test/test.component';
 import { ErrorComponent } from './error/error.component';
+import { SubscriptionComponent } from './subscription/subscription.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ErrorComponent } from './error/error.component';
 
     TestComponent,
     HomeComponent,
-    ErrorComponent
+    ErrorComponent,
+    SubscriptionComponent
   ],
   imports: [
     BrowserModule,
