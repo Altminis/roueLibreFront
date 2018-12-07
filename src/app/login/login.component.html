@@ -1,3 +1,14 @@
-<p>
-  login works!
-</p>
+<h2>Sign up</h2>
+<form (ngSubmit)="register()" [formGroup]="userForm">
+  <div>
+    <label>Pseudo</label><input formControlName="pseudo">
+    <div *ngIf="pseudoCtrl.dirty && pseudoCtrl.hasError('required')">Veuillez saisir votre pseudo</div>
+  </div>
+  <div>
+    <label>Mot de passe</label><input type="password" formControlName="password">
+    <div *ngIf="passwordCtrl.dirty && passwordCtrl.hasError('required')">Veuillez saisir votre mot de passe</div>
+    
+  </div>
+  <button type="submit" [disabled]="userForm.invalid" >Connexion</button>
+</form>
+<p *ngIf="errorMessage">{{errorMessage}}</p>
