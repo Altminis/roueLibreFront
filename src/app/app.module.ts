@@ -20,6 +20,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import { ModificationComponent } from './modification/modification.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,9 @@ import {MatButtonModule} from '@angular/material/button';
     TestComponent,
     HomeComponent,
     ErrorComponent,
-    SubscriptionComponent
+    SubscriptionComponent,
+    SubscriptionComponent,
+    ModificationComponent
   ],
   imports: [
     BrowserModule,
