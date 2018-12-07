@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
-import { AuthServiceService } from '../auth-service.service';
+import { AuthService } from '../service/auth-service.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   passwordCtrl: FormControl;
   userForm: FormGroup;
 
-  constructor(fb: FormBuilder, private  authService : AuthServiceService) {
+  constructor(fb: FormBuilder, private  authService : AuthService) {
     this.pseudoCtrl = fb.control('', Validators.required);
     this.passwordCtrl = fb.control('', Validators.required);
     this.userForm = fb.group({

@@ -9,13 +9,15 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

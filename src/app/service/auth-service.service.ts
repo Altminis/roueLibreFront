@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserService } from './user-service.service';
-import { User } from './model/User';
+import { User } from '../model/User';
 import { Observable } from 'rxjs';
-import { map, catchError } from "rxjs/operators";
+import { map } from "rxjs/operators";
+import { UserService } from './user-service.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthServiceService {
+export class AuthService {
 
   isAuth = false;
 
@@ -31,6 +31,4 @@ export class AuthServiceService {
     this.user = null;
     this.router.navigate(['/accueil']);
   }
-
-
 }
