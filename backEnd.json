@@ -1,0 +1,25 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "prenom": "Arnaud",
+        "nom": "RUFFAULT",
+        "pseudo" : "Nono",
+        "password" : "test",
+        "civilite": 0,
+        "description" : "Coucou les gens",
+        "mail": "arnaud.ruffault@gmail.com"
+      }
+    ],
+    "adresses" : [
+        {
+            "id" : 1,
+            "adresseLigne1" : "101 avenue du Pirée",
+            "adresseLigne2" : "résidence le Moulin",
+            "ville" :  "Montpellier",
+            "codePostal" : 34000,
+            "pays" : "France",
+            "userId" : 1
+        }
+    ]
+}
