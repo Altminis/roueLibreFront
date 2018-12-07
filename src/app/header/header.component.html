@@ -1,3 +1,22 @@
-<p>
-  header works!
-</p>
+<header class="navbar">
+  <section class="navbar-section">
+    <a href="#" class="btn btn-link">Accueil</a>
+    <a href="#" class="btn btn-link">Examples</a>
+  </section>
+  <section class="navbar-center">
+    <a href="#"><img src="../../../Images/Logo.png" alt="logo"> </a>
+  </section>
+  <section class="navbar-section">
+    <div *ngIf="!isConnected">
+      <a href="#" class="btn btn-link">Connection</a>
+      <a href="#" class="btn btn-link">Inscription</a>
+    </div>
+    <div *ngIf="isConnected">
+      <button class="btn btn-link" [matMenuTriggerFor]="menu">Mon Compte</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Mon Profil</button>
+        <button mat-menu-item>Mes Orders</button>
+      </mat-menu>
+    </div>
+  </section>
+</header>
