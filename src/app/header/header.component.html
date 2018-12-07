@@ -35,7 +35,7 @@
                 <div *ngIf="this.authService.isAuth">
                   <a class="nav-link m-2 menu-item" [matMenuTriggerFor]="menu">Mon Compte</a>
                   <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Mon Profil</button>
+                    <button mat-menu-item [routerLink]="['/myaccount']">Mon Profil</button>
                     <button mat-menu-item>Mes Orders</button>
                   </mat-menu>
                 </div>
