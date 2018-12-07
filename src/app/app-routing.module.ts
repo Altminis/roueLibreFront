@@ -10,7 +10,8 @@ const routes: Routes = [
     {path: "login", component: LoginComponent},
     {path: "test", component: TestComponent, canActivate: [LoggedInGuard]},
     {path: "accueil", component: HomeComponent},
-    {path: "myaccount", component: MyAccountComponent}
+    {path: "myaccount", component: MyAccountComponent},
+    { path: '', component: HomeComponent }
 
 
 ]
