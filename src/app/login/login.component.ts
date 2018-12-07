@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { AuthService } from '../service/auth-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
   passwordCtrl: FormControl;
   userForm: FormGroup;
 
-  constructor(fb: FormBuilder, private  authService : AuthService) {
+  constructor(fb: FormBuilder, private  authService : AuthService, private router: Router) {
     this.pseudoCtrl = fb.control('', Validators.required);
     this.passwordCtrl = fb.control('', Validators.required);
     this.userForm = fb.group({
@@ -31,8 +32,7 @@ export class LoginComponent implements OnInit {
     .subscribe(isAuth => {
       if(isAuth){
         this.errorMessage = null;
-        console.log("bien ouej")
-        //Redirection sur l'accueil
+        this.router.navigate(['/accueil']);
       } else {
         this.errorMessage = "La connexion a echoué, vérifiez votre pseudo et votre mot de passe";
       }

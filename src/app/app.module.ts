@@ -14,6 +14,8 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TestComponent } from './test/test.component';
+import { ErrorComponent } from './error/error.component';
+import { SubscriptionComponent } from './subscription/subscription.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { TestComponent } from './test/test.component';
     MyAccountComponent,
 
     TestComponent,
-    HomeComponent
+    HomeComponent,
+    ErrorComponent,
+    SubscriptionComponent
   ],
   imports: [
     BrowserModule,
