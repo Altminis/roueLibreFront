@@ -8,6 +8,7 @@ import { HomeComponent } from "./home/home.component";
 import { ErrorComponent } from "./error/error.component";
 import { ModificationComponent } from "./modification/modification.component";
 import { ListeAnnoncesComponent } from "./liste-annonces/liste-annonces.component";
+import { SubscriptionComponent } from "./subscription/subscription.component";
 
 
 
@@ -19,6 +20,8 @@ const routes: Routes = [
     {path: "test", component: TestComponent, canActivate: [LoggedInGuard]},
     {path: "accueil", component: HomeComponent},
     {path: "myaccount", component: MyAccountComponent},
+    {path: "subscription", component: SubscriptionComponent},
+    { path: '', component: HomeComponent },
     {path: "modification", component: ModificationComponent},
     { path: '', component: HomeComponent },
     { path: 'not-found', component: ErrorComponent },
