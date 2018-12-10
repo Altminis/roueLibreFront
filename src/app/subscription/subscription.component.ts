@@ -8,14 +8,16 @@ import { UserService } from '../service/user-service.service';
   styleUrls: ['./subscription.component.css']
 })
 export class SubscriptionComponent implements OnInit {
-
+ 
+  ville = new FormControl('');
   pays = new FormControl('');
   codepostal = new FormControl('');
   adresse = new FormControl('');
   adresse2 = new FormControl('');
   email = new FormControl('');
   emailValue = '';
-  emailInput = document.querySelector('#inputEmail');
+  emailIsValid = true;
+  pristine = true;
   prenom = new FormControl('');
   nom = new FormControl('');
   pseudo = new FormControl('');
@@ -30,10 +32,7 @@ export class SubscriptionComponent implements OnInit {
 
   checkEmail(event : any){
     this.emailValue = event.target.value;
-    console.log(this.userService.getUserByPseudo(this.emailValue));
-    if (this.userService.getUserByPseudo(this.emailValue)){
-      this.emailInput.classList.toggle('is-invalid');
-    }
+    this.emailValue === '' ? this.pristine = true : this.pristine = false;
   }
 
 }
