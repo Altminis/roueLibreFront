@@ -21,6 +21,8 @@ import { MatInputModule } from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { ModificationComponent } from './modification/modification.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { ModificationComponent } from './modification/modification.component';
     ErrorComponent,
     SubscriptionComponent,
     SubscriptionComponent,
-    ModificationComponent
+    ModificationComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,8 @@ import { ModificationComponent } from './modification/modification.component';
     MatFormFieldModule,
     MatInputModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

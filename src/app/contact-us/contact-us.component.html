@@ -1,0 +1,30 @@
+<form class="formContainer">
+  <br />
+  <h3 class="text-center">Nous contacter</h3>
+  <br />
+  <div class="form-group">
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Votre adresse email *"
+      required>
+    <small id="emailHelp" class="form-text text-muted">Nous n'utiliserons pas votre email à des fins commerciales.</small>
+  </div>
+
+  <mat-form-field>
+    <mat-select placeholder="Type de demande" disableRipple required>
+      <mat-option value="renseignement">Renseignement</mat-option>
+      <mat-option value="reclamation">Réclamation</mat-option>
+      <mat-option value="remerciement">Remerciement</mat-option>
+      <mat-option value="autreRaison">Autre raison</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <br />
+  <br />
+
+  <div class="form-group">
+    <textarea class="form-control" rows="3" placeholder="Votre message *" required></textarea>
+    <label>*Ces champs sont obligatoires</label>
+  </div>
+  <div class="boutonEnvoi">
+    <button type="submit" class="btn btn-primary" style="margin: auto;">Envoyer</button>
+  </div>
+</form>
