@@ -11,7 +11,7 @@
               <p>Email : {{ user.mail }}</p>
               <p>Description : {{ user.description }}</p>
               <br/><br/>
-              <button [routerLink]="['/modification']">Modifer le profil</button>
+              <button  mat-button mat-flat-button color="primary" [routerLink]="['/modification']">Modifer le profil</button>
             </mat-tab>
             <mat-tab label="Mes produits à louer">
               <mat-icon>directions_bike</mat-icon><br/><br/>

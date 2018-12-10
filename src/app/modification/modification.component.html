@@ -1,3 +1,24 @@
-<p>
-  modification works!
-</p>
+<h3>Modification du profil</h3>
+<form (ngSubmit)="modifyUser()" [formGroup]="updateUserForm">
+  <mat-form-field>
+    <input matInput formControlName="nom" >
+    <mat-error *ngIf="nomCtrl.hasError('required')">Nom obligatoire</mat-error>
+  </mat-form-field><br />
+  <mat-form-field>
+    <input matInput formControlName="prenom">
+    <mat-error *ngIf="prenomCtrl.hasError('required')">Prénom obligatoire</mat-error>
+  </mat-form-field><br />
+  <mat-form-field>
+    <input matInput formControlName="pseudo">
+    <mat-error *ngIf="pseudoCtrl.hasError('required')">Pseudo obligatoire</mat-error>
+  </mat-form-field><br />
+  <mat-form-field>
+    <input matInput formControlName="email">
+    <mat-error *ngIf="emailCtrl.hasError('required')">Email obligatoire</mat-error>
+    <mat-error *ngIf="emailCtrl.hasError('email')">Email invalide</mat-error>
+  </mat-form-field><br />
+  <mat-form-field>
+    <input matInput formControlName="description">
+  </mat-form-field><br />
+<button  mat-button mat-flat-button color="primary" type="submit" [disabled]="updateUserForm.invalid">Modifier</button>
+</form>
