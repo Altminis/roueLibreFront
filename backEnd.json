@@ -135,6 +135,7 @@
       "id": 1,
       "intitule": "Mon beau vélo",
       "marque": "decathlon",
+      "userId": 1,
       "loueur": {
         "id": 2,
         "prenom": "Jérémy",
@@ -180,6 +181,7 @@
       "id": 2,
       "intitule": "trotinette motorisée",
       "marque": "michelin",
+      "userId": 1,
       "loueur": {
         "id": 2,
         "prenom": "Jérémy",

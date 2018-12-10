@@ -24,7 +24,9 @@ import { ModificationComponent } from './modification/modification.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import {MatSelectModule} from '@angular/material/select';
 import { ListeAnnoncesComponent } from './liste-annonces/liste-annonces.component';
-
+import { VehiculesComponent } from './vehicules/vehicules.component';
+import { VehiculeComponent } from './vehicule/vehicule.component';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { ListeAnnoncesComponent } from './liste-annonces/liste-annonces.componen
     SubscriptionComponent,
     ModificationComponent,
     ContactUsComponent,
-    ListeAnnoncesComponent
+    ListeAnnoncesComponent,
+    VehiculesComponent,
+    VehiculeComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +63,8 @@ import { ListeAnnoncesComponent } from './liste-annonces/liste-annonces.componen
     MatInputModule,
     MatCardModule,
     MatButtonModule,
-    MatSelectModule
+    MatSelectModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
