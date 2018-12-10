@@ -14,7 +14,13 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TestComponent } from './test/test.component';
+import { ErrorComponent } from './error/error.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import { ModificationComponent } from './modification/modification.component';
 
 
 @NgModule({
@@ -29,7 +35,10 @@ import { SubscriptionComponent } from './subscription/subscription.component';
 
     TestComponent,
     HomeComponent,
-    SubscriptionComponent
+    ErrorComponent,
+    SubscriptionComponent,
+    SubscriptionComponent,
+    ModificationComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +49,11 @@ import { SubscriptionComponent } from './subscription/subscription.component';
     MatMenuModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,15 +1,15 @@
-<h2>Sign up</h2>
-<form (ngSubmit)="register()" [formGroup]="userForm">
-  <div>
-    <label>Pseudo</label><input formControlName="pseudo">
-    <div *ngIf="pseudoCtrl.dirty && pseudoCtrl.hasError('required')">Veuillez saisir votre pseudo</div>
-  </div>
-  <div>
-    <label>Mot de passe</label><input type="password" formControlName="password">
-    <div *ngIf="passwordCtrl.dirty && passwordCtrl.hasError('required')">Veuillez saisir votre mot de passe</div>
-    
-  </div>
-  <button type="submit" [disabled]="userForm.invalid" >Connexion</button>
-</form>
-<p *ngIf="errorMessage">{{errorMessage}}</p>
-<a [routerLink]="['/test']">Test</a>
+<h2>Connexion</h2>
+<mat-card>
+  <form (ngSubmit)="register()" [formGroup]="userForm">
+    <mat-form-field class="pseudo">
+      <label>Pseudo</label><input matInput formControlName="pseudo">
+      <mat-error *ngIf="pseudoCtrl.dirty && pseudoCtrl.hasError('required')">Veuillez saisir votre pseudo</mat-error>
+    </mat-form-field>
+    <mat-form-field class="password">
+      <label>Mot de passe</label><input matInput type="password" formControlName="password">
+      <mat-error *ngIf="passwordCtrl.dirty && passwordCtrl.hasError('required')">Veuillez saisir votre mot de passe</mat-error>
+    </mat-form-field>
+    <button mat-button mat-flat-button color="primary" type="submit" [disabled]="userForm.invalid">Connexion</button>
+  </form>
+  <p *ngIf="errorMessage">{{errorMessage}}</p>
+</mat-card>

@@ -12,7 +12,6 @@ private user: User;
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
-    debugger;
     this.user = this.authService.user;
   }
 
