@@ -1,0 +1,30 @@
+<div *ngIf="annonce" class="d-flex justify-content-around align-items-center">
+  <div>
+    <mat-card>
+      <h2>Loueur :</h2>
+      <mat-list role="list">
+        <mat-list-item role="listitem">Civilité : {{ getCivilite(annonce.vehicule.loueur.civilite) | titlecase }}
+        </mat-list-item>
+        <mat-list-item role="listitem">Pseudo : {{ annonce.vehicule.loueur.pseudo | titlecase}}</mat-list-item>
+        <mat-list-item role="listitem">Description : {{ annonce.vehicule.loueur.description }}</mat-list-item>
+      </mat-list>
+    </mat-card>
+
+    <mat-card>
+      <h2>Véhicule :</h2>
+      <mat-list role="list">
+        <mat-list-item role="listitem">Catégorie : {{ annonce.vehicule.categorie.intitule | titlecase }}</mat-list-item>
+        <mat-list-item role="listitem">Intitulé : {{ annonce.vehicule.intitule }}</mat-list-item>
+        <mat-list-item role="listitem">Marque : {{ annonce.vehicule.marque }}</mat-list-item>
+        <mat-list-item role="listitem">Etat : {{ annonce.vehicule.etat.intitule | titlecase }}</mat-list-item>
+        <mat-list-item role="listitem">Description : {{ annonce.vehicule.description }}</mat-list-item>
+      </mat-list>
+    </mat-card>
+  </div>
+  <div>
+      <img [src] ="getUrlPhoto(annonce.vehicule.photo)">
+  </div>
+</div>
+<div *ngIf="!annonce">
+  Chargement...
+</div>

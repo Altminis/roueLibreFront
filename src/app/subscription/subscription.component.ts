@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { UserService } from '../service/user-service.service';
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-subscription',
@@ -21,6 +22,7 @@ export class SubscriptionComponent implements OnInit {
   email = new FormControl('');
   emailValue = '';
   emailIsValid;
+  emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   pristineEmail = true;
   prenom = new FormControl('');
   nom = new FormControl('');
@@ -33,23 +35,34 @@ export class SubscriptionComponent implements OnInit {
   }
 
   checkEmail(event: any) {
-    this.emailValue = event.target.value;
-    this.emailValue === '' ? this.pristineEmail = true : this.pristineEmail = false;
-    this.userService.getUserByPseudo(this.emailValue).subscribe(
-      user => {
-        user == null ? this.emailIsValid = true : this.emailIsValid = false;
-      }
-    )
+    this.email.valueChanges.pipe(
+      debounceTime(200)
+    ).subscribe(
+        newValue => {
+          this.emailValue = newValue;
+          this.emailValue === '' ? this.pristineEmail = true : this.pristineEmail = false;
+          this.userService.getUserByEmail(this.emailValue).subscribe(
+            user => {
+              user == null && this.emailRegex.test(this.emailValue) ? this.emailIsValid = true : this.emailIsValid = false;
+            }
+          )
+        }  )
   }
 
   checkPseudo(event: any) {
-    this.pseudoValue = event.target.value;
-    this.pseudoValue === '' ? this.pristinePseudo = true : this.pristinePseudo = false;
-    this.userService.getUserByPseudo(this.pseudoValue).subscribe(
-      user => {
-        user == null ? this.pseudoIsValid = true : this.pseudoIsValid = false;
-      }
-    )
+    this.pseudo.valueChanges.pipe(
+      debounceTime(200)
+    ).subscribe(
+        newValue => {
+          this.pseudoValue = newValue;
+          this.pseudoValue === '' ? this.pristinePseudo = true : this.pristinePseudo = false;
+          this.userService.getUserByPseudo(this.pseudoValue).subscribe(
+            user => {
+              user == null ? this.pseudoIsValid = true : this.pseudoIsValid = false;
+            }
+          )
+        }
+      )
   }
 
 }

@@ -228,7 +228,7 @@
       "id": 1,
       "vehicule": {
         "id": 1,
-        "intitule": "neuf",
+        "intitule": "Vélo de ville",
         "marque": "decathlon",
         "loueur": {
           "id": 1,
@@ -258,7 +258,7 @@
         },
         "etat": {
           "id": 2,
-          "intitulé": "bon état"
+          "intitule": "bon état"
         },
         "categorie": {
           "id": 1,
@@ -305,7 +305,7 @@
         },
         "etat": {
           "id": 2,
-          "intitulé": "bon état"
+          "intitule": "bon état"
         },
         "categorie": {
           "id": 4,

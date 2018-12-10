@@ -2,8 +2,13 @@
   <div class="container">
     <div class="row ">
       <div class="col-sm" *ngFor="let numero of numeros">
-        <img class="imgVelo" src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+        <div class="card border-light mb-3" style="max-width: 18rem;">
+          <div class="card-header">Pseudo</div>
+          <div class="card-body">
+            <img class="imgVelo" src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
           alt="velo">
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -28,4 +33,17 @@
       </div>
     </div>
   </div>
+  <div class="container announces">
+      <div class="row">
+        <div class="col-sm-8 col-md-4" *ngFor="let velo of velos">
+          <div class="card border-light mb-3" style="max-width: 18rem;">
+            <div class="card-header">Pseudo</div>
+            <div class="card-body">
+              <img class="imgVelo" [src]="velo"
+            alt="velo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>

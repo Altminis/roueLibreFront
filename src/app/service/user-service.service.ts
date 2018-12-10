@@ -34,6 +34,12 @@ export class UserService {
       map(users => users[0]));
   }
 
+  getUserByEmail(term: string): Observable<User>{
+    return this.http.get<User[]>(`${environment.backURL}/users/?mail=${term}`)
+    .pipe(
+      map(users => users[0]));
+  }
+
   updateUser (user: User): Observable<any> {
     console.log(user);
     return this.http.put(environment.backURL + '/users/' + user.id, user);
