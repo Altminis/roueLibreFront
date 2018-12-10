@@ -4,7 +4,7 @@
       <div class="form-group col-md-6">
         <label for="inputEmail">Email</label>
         <input type="email" class="form-control" id="inputEmail" placeholder="Email" [formControl]="email" (keyup)="checkEmail($event)"
-          [class.is-valid]="emailIsValid && !pristine" [class.is-invalid]="!emailIsValid && !pristine">
+          [class.is-valid]="emailIsValid && !pristineEmail" [class.is-invalid]="!emailIsValid && !pristineEmail">
         <div class="valid-feedback">
           Looks good!
         </div>
@@ -19,7 +19,7 @@
       <div class="form-group col-md-6">
         <label for="inputPseudo">Pseudo</label>
         <input type="text" class="form-control" id="inputPseudo" placeholder="Pseudo" [formControl]="pseudo" (keyup)="checkPseudo($event)"
-          [class.is-valid]="pseudoIsValid && !pristine" [class.is-invalid]="!pseudoIsValid && !pristine">
+          [class.is-valid]="pseudoIsValid && !pristinePseudo" [class.is-invalid]="!pseudoIsValid && !pristinePseudo">
       </div>
       <div class="valid-feedback">
         Looks good!
