@@ -1,3 +1,6 @@
-<p>
-  liste-annonces works!
-</p>
+<div *ngFor="let annonce of annonces">
+  <p>Loueur : {{ annonce.vehicule.loueur.pseudo}}</p>
+  <p>Véhicule: {{ annonce.vehicule.categorie.intitule}}</p>
+  <img [src] ="getUrlPhoto(annonce.vehicule.photo)">
+  <br>
+</div>

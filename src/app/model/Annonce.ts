@@ -1,7 +1,8 @@
+import { Vehicule } from "./Vehicule";
+
 export class Annonce {
-    id?: number
-    loueur: User
-    vehicule: Vehicule
-    dateDebut: string
-    dateFin: string
+    id? : number
+    vehicule : Vehicule
+    debut : string
+    fin : string
 }

@@ -1,3 +1,5 @@
+import { Adresse } from "./Adresse";
+
 export class User {
     id? : number;
     prenom : string;
@@ -5,6 +7,7 @@ export class User {
     pseudo : string;
     password : string;
     civilite : number;
-    "description": string;
-    "mail": string;
+    description: string;
+    mail: string;
+    adresses : Adresse[];
 }

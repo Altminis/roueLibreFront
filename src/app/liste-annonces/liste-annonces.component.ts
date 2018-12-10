@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AnnoncesService } from '../service/annonces-service.service';
 import { Annonce } from '../model/annonce';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-liste-annonces',
@@ -23,6 +24,10 @@ export class ListeAnnoncesComponent implements OnInit {
         this.annonces = annonces;
       }
     )
+  }
+
+  getUrlPhoto(namePhoto : string){
+    return environment.imagesURL + namePhoto
   }
 
 }

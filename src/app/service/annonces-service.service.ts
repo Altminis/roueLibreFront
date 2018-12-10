@@ -3,14 +3,14 @@ import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Annonce } from '../model/Annonce';
-import { UserService } from './user-service.service';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AnnoncesService {
 
-  constructor(private http: HttpClient, private userService : UserService) { }
+  constructor(private http: HttpClient) { }
 
   getAnnonces() : Observable<Annonce[]> {
     return this.http.get<Annonce[]>(environment.backURL + '/annonces');
