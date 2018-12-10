@@ -21,6 +21,7 @@ import { MatInputModule } from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { ModificationComponent } from './modification/modification.component';
+import { ListeAnnoncesComponent } from './liste-annonces/liste-annonces.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ModificationComponent } from './modification/modification.component';
     ErrorComponent,
     SubscriptionComponent,
     SubscriptionComponent,
-    ModificationComponent
+    ModificationComponent,
+    ListeAnnoncesComponent
   ],
   imports: [
     BrowserModule,

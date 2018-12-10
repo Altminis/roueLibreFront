@@ -7,12 +7,14 @@ import { LoggedInGuard } from "./guard/logged-in-guard.service";
 import { HomeComponent } from "./home/home.component";
 import { ErrorComponent } from "./error/error.component";
 import { ModificationComponent } from "./modification/modification.component";
+import { ListeAnnoncesComponent } from "./liste-annonces/liste-annonces.component";
 
 
 
     
 
 const routes: Routes = [
+    {path: "annonces", component: ListeAnnoncesComponent},
     {path: "login", component: LoginComponent},
     {path: "test", component: TestComponent, canActivate: [LoggedInGuard]},
     {path: "accueil", component: HomeComponent},

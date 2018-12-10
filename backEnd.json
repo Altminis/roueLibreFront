@@ -131,7 +131,7 @@
     "vehicules" : [
         {
             "id" : 1,
-            "intitulé" : "neuf",
+            "intitule" : "neuf",
             "marque" : "decathlon",
             "idUser" : 1,
             "idEtat" : 2,
@@ -139,7 +139,11 @@
             "isAvailable" : true,
             "idAdresse" : 1,
             "description" : "super vélo de ville",
-            "photo" : ""
+            "photo" : "public/images/big_944e4e306fd84b349da16185813ac850.jpg"
         }
+    ],
+
+    "annonces" : [
+        
     ]
 }
