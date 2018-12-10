@@ -1,145 +1,145 @@
 {
-    "users": [
-      {
-        "id": 1,
-        "prenom": "Arnaud",
-        "nom": "RUFFAULT",
-        "pseudo" : "Nono",
-        "password" : "test",
-        "civilite": 0,
-        "description" : "Coucou les gens",
-        "mail": "arnaud.ruffault@gmail.com"
-      },
-      {
-        "id": 2,
-        "prenom": "Jérémy",
-        "nom": "PTAK",
-        "pseudo" : "Jayjay",
-        "password" : "smash",
-        "civilite": 0,
-        "description" : "Excellent",
-        "mail": "jeremy.ptak@gmail.com"
-      },
-      {
-        "id": 3,
-        "prenom": "Nicolas",
-        "nom": "BRIAND",
-        "pseudo" : "monsieur",
-        "password" : "ahbon",
-        "civilite": 0,
-        "description" : "Ah bonn",
-        "mail": "nico.briand@gmail.com"
-      },
-      {
-        "id": 4,
-        "prenom": "Ahmed",
-        "nom": "HAMZAOUI",
-        "pseudo" : "papa",
-        "password" : "dormir",
-        "civilite": 0,
-        "description" : "",
-        "mail": "ahmed.hamzaoui@gmail.com"
-      }
-    ],
-    "adresses" : [
-        {
-            "id" : 1,
-            "adresseLigne1" : "101 avenue du Pirée",
-            "adresseLigne2" : "résidence le Moulin",
-            "ville" :  "Montpellier",
-            "codePostal" : 34000,
-            "pays" : "France",
-            "userId" : 1
-        },
-        {
-            "id" : 2,
-            "adresseLigne1" : "1 rue Granier",
-            "adresseLigne2" : "",
-            "ville" :  "Montpellier",
-            "codePostal" : 34000,
-            "pays" : "France",
-            "userId" : 3
-        },
-        {
-            "id" : 3,
-            "adresseLigne1" : "1 rue des lilas",
-            "adresseLigne2" : "résidence Le perchoir",
-            "ville" :  "Toulouse",
-            "codePostal" : 31000,
-            "pays" : "France",
-            "userId" : 1
-        },
-        {
-            "id" : 4,
-            "adresseLigne1" : "101 avenue du Pirée",
-            "adresseLigne2" : "résidence le Moulin",
-            "ville" :  "Montpellier",
-            "codePostal" : 34000,
-            "pays" : "France",
-            "userId" : 2
-        },
-        {
-            "id" : 5,
-            "adresseLigne1" : "455  avenue des apothicaires",
-            "adresseLigne2" : "",
-            "ville" :  "Montpellier",
-            "codePostal" : 34000,
-            "pays" : "France",
-            "userId" : 4
-        }
-    ],
-    "categories" : [
-        {
-            "id" : 1,
-            "intitulé" : "vélo",
-            "description" : "vélo non motorisé"
-        },
-        {
-            "id" : 2,
-            "intitulé" : "vélo éléctrique",
-            "description" : "vélo motorisé"
-        },
-        {
-            "id" : 3,
-            "intitulé" : "trotinette",
-            "description" : "trotinette non motorisée"
-        },
-        {
-            "id" : 4,
-            "intitulé" : "trotinette éléctrique",
-            "description" : "trotinette motorisée"
-        }
-    ],
-    "etats" : [
-        {
-            "id" : 1,
-            "intitulé" : "neuf"
-        },
-        {
-            "id" : 2,
-            "intitulé" : "bon état"
-        },
-        {
-            "id" : 3,
-            "intitulé" : "correct"
-        },
-        {
-            "id" : 4,
-            "intitulé" : "mauvais état"
-        }
-    ],
-    "vehicules" : [
-        {
-            "id" : 1,
-            "intitulé" : "neuf",
-            "marque" : "decathlon",
-            "idUser" : 1,
-            "idEtat" : 2,
-            "idCategorie" : 1,
-            "isAvailable" : true,
-            "idAdresse" : 1,
-            "description" : "super vélo de ville",
-            "photo" : ""
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "prenom": "Arnaud",
+      "nom": "RUFFAULT",
+      "pseudo": "Nono",
+      "password": "test",
+      "civilite": 0,
+      "description": "Je suis un boloss",
+      "mail": "arnaud.ruffault@gmail.com"
+    },
+    {
+      "id": 2,
+      "prenom": "Jérémy",
+      "nom": "PTAK",
+      "pseudo": "Jayjay",
+      "password": "smash",
+      "civilite": 0,
+      "description": "Excellent",
+      "mail": "jeremy.ptak@gmail.com"
+    },
+    {
+      "id": 3,
+      "prenom": "Nicolas",
+      "nom": "BRIAND",
+      "pseudo": "monsieur",
+      "password": "ahbon",
+      "civilite": 0,
+      "description": "Ah bonn",
+      "mail": "nico.briand@gmail.com"
+    },
+    {
+      "id": 4,
+      "prenom": "Ahmed",
+      "nom": "HAMZAOUI",
+      "pseudo": "papa",
+      "password": "dormir",
+      "civilite": 0,
+      "description": "",
+      "mail": "ahmed.hamzaoui@gmail.com"
+    }
+  ],
+  "adresses": [
+    {
+      "id": 1,
+      "adresseLigne1": "101 avenue du Pirée",
+      "adresseLigne2": "résidence le Moulin",
+      "ville": "Montpellier",
+      "codePostal": 34000,
+      "pays": "France",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "adresseLigne1": "1 rue Granier",
+      "adresseLigne2": "",
+      "ville": "Montpellier",
+      "codePostal": 34000,
+      "pays": "France",
+      "userId": 3
+    },
+    {
+      "id": 3,
+      "adresseLigne1": "1 rue des lilas",
+      "adresseLigne2": "résidence Le perchoir",
+      "ville": "Toulouse",
+      "codePostal": 31000,
+      "pays": "France",
+      "userId": 1
+    },
+    {
+      "id": 4,
+      "adresseLigne1": "101 avenue du Pirée",
+      "adresseLigne2": "résidence le Moulin",
+      "ville": "Montpellier",
+      "codePostal": 34000,
+      "pays": "France",
+      "userId": 2
+    },
+    {
+      "id": 5,
+      "adresseLigne1": "455  avenue des apothicaires",
+      "adresseLigne2": "",
+      "ville": "Montpellier",
+      "codePostal": 34000,
+      "pays": "France",
+      "userId": 4
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "intitulé": "vélo",
+      "description": "vélo non motorisé"
+    },
+    {
+      "id": 2,
+      "intitulé": "vélo éléctrique",
+      "description": "vélo motorisé"
+    },
+    {
+      "id": 3,
+      "intitulé": "trotinette",
+      "description": "trotinette non motorisée"
+    },
+    {
+      "id": 4,
+      "intitulé": "trotinette éléctrique",
+      "description": "trotinette motorisée"
+    }
+  ],
+  "etats": [
+    {
+      "id": 1,
+      "intitulé": "neuf"
+    },
+    {
+      "id": 2,
+      "intitulé": "bon état"
+    },
+    {
+      "id": 3,
+      "intitulé": "correct"
+    },
+    {
+      "id": 4,
+      "intitulé": "mauvais état"
+    }
+  ],
+  "vehicules": [
+    {
+      "id": 1,
+      "intitulé": "neuf",
+      "marque": "decathlon",
+      "idUser": 1,
+      "idEtat": 2,
+      "idCategorie": 1,
+      "isAvailable": true,
+      "idAdresse": 1,
+      "description": "super vélo de ville",
+      "photo": ""
+    }
+  ]
 }

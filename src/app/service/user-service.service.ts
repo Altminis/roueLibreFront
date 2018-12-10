@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { User } from '../model/User';
 import { Observable } from 'rxjs';
-import { map, tap } from "rxjs/operators";
+import { map } from "rxjs/operators";
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -32,5 +34,10 @@ export class UserService {
     return this.http.get<User[]>(`${environment.backURL}/users/?name=${term}`)
     .pipe(
       map(users => users[0]));
+  }
+
+  updateUser (user: User): Observable<any> {
+    console.log(user);
+    return this.http.put(environment.backURL + '/users/' + user.id, user);
   }
 }
