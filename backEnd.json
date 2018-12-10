@@ -7,7 +7,7 @@
       "pseudo": "Nono",
       "password": "test",
       "civilite": 0,
-      "description": "Coucou les gens!",
+      "description": "Coucou les gens",
       "mail": "arnaud.ruffault@gmail.com",
       "adresses": [
         {
@@ -36,7 +36,7 @@
       "password": "smash",
       "civilite": 0,
       "description": "Excellent",
-      "mail": "jeremy.ptak@gmail.com",
+      "mail": "jeremy.ptak24@gmail.com",
       "adresses": [
         {
           "id": 3,

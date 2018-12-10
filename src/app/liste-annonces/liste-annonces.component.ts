@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AnnoncesService } from '../service/annonces-service.service';
-import { Annonce } from '../model/annonce';
+import { Annonce } from '../model/Annonce';
 import { environment } from 'src/environments/environment';
 
 @Component({
