@@ -23,6 +23,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { ModificationComponent } from './modification/modification.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import {MatSelectModule} from '@angular/material/select';
+import { ListeAnnoncesComponent } from './liste-annonces/liste-annonces.component';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import {MatSelectModule} from '@angular/material/select';
     SubscriptionComponent,
     SubscriptionComponent,
     ModificationComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ListeAnnoncesComponent
   ],
   imports: [
     BrowserModule,

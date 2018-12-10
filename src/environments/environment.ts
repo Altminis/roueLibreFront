@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  backURL: "http://localhost:3000"
+  backURL: "http://localhost:3000",
+  imagesURL : "http://localhost:3000/images/"
 };
 
 /*

@@ -9,6 +9,8 @@ import { ErrorComponent } from "./error/error.component";
 import { ModificationComponent } from "./modification/modification.component";
 import { ContactUsComponent } from "./contact-us/contact-us.component";
 
+import { ListeAnnoncesComponent } from "./liste-annonces/liste-annonces.component";
+import { SubscriptionComponent } from "./subscription/subscription.component";
 
 
 
@@ -20,6 +22,9 @@ const routes: Routes = [
     { path: 'myaccount', component: MyAccountComponent },
     { path: 'modification', component: ModificationComponent },
     { path: 'contact-us', component: ContactUsComponent },
+    { path: 'annonces', component: ListeAnnoncesComponent },
+    { path: 'test', component: TestComponent, canActivate: [LoggedInGuard] },
+    { path: 'subscription', component: SubscriptionComponent },
     { path: '', component: HomeComponent },
     { path: 'not-found', component: ErrorComponent },
     { path: '**', redirectTo: 'not-found' }
