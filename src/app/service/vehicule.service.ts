@@ -3,27 +3,37 @@ import { HttpClient } from '@angular/common/http';
 import { Vehicule } from '../model/Vehicule';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
+import { User } from '../model/User';
 
 @Injectable({
   providedIn: 'root'
 })
 export class VehiculeService {
 
-  constructor(private http : HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getVehicules() : Observable<Vehicule[]> {
-    return this.http.get<Vehicule[]>(environment.backURL + '/vehicules');
-  }
 
-  getVehicule(id) : Observable<Vehicule> {
+
+  getVehicule(id): Observable<Vehicule> {
     return this.http.get<Vehicule>(environment.backURL + '/vehicules/' + id);
   }
 
-  addVehicules(vehicules){
+  addVehicules(vehicules) {
     return this.http.post(environment.backURL + '/vehicules', vehicules);
   }
 
-  deleteVehculesById(id : number) {
+  deleteVehculesById(id: number) {
     return this.http.delete(environment.backURL + '/vehicules/' + id);
   }
+
+  getVehicules(user: User): Observable<Vehicule[]> {
+    if (user === undefined) {
+      return this.http.get<Vehicule[]>(environment.backURL + '/vehicules');
+
+    } else {
+      return this.http.get<Vehicule[]>(environment.backURL + `/users/${user.id}/vehicules`);
+    }
+  }
+
+  
 }

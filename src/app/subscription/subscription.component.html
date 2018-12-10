@@ -9,7 +9,7 @@
           Looks good!
         </div>
         <div class="invalid-feedback">
-          Cette adresse email est déjà utilisée !
+          Cette adresse email est déjà utilisée ou n'est pas valide!
         </div>
       </div>
       <div class="form-group col-md-6">
@@ -20,12 +20,12 @@
         <label for="inputPseudo">Pseudo</label>
         <input type="text" class="form-control" id="inputPseudo" placeholder="Pseudo" [formControl]="pseudo" (keyup)="checkPseudo($event)"
           [class.is-valid]="pseudoIsValid && !pristinePseudo" [class.is-invalid]="!pseudoIsValid && !pristinePseudo">
-      </div>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
-      <div class="invalid-feedback">
-        Ce pseudo est déjà utilisé !
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+        <div class="invalid-feedback">
+          Ce pseudo est déjà utilisé !
+        </div>
       </div>
     </div>
     <div class="form-row">
