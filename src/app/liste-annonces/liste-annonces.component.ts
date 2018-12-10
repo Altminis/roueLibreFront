@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AnnoncesService } from '../service/annonces-service.service';
-import { Annonce } from '../model/annonce';
+import { Annonce } from '../model/Annonce';
 import { environment } from 'src/environments/environment';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-liste-annonces',
@@ -10,7 +11,8 @@ import { environment } from 'src/environments/environment';
 })
 export class ListeAnnoncesComponent implements OnInit {
 
-  annonces : Annonce[]
+  annonces : MatTableDataSource<Annonce>
+  displayedColumns: string[] = ['loueur', 'categorie', 'image', 'detail'];
 
   constructor(private annonceService : AnnoncesService) { }
 
@@ -21,7 +23,7 @@ export class ListeAnnoncesComponent implements OnInit {
   refreshAnnonces() {
     this.annonceService.getAnnonces().subscribe(
       (annonces: Annonce[]) => {
-        this.annonces = annonces;
+        this.annonces = new MatTableDataSource(annonces);
       }
     )
   }
