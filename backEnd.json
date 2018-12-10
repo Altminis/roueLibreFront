@@ -7,8 +7,26 @@
       "pseudo": "Nono",
       "password": "test",
       "civilite": 0,
-      "description": "Je suis un boloss",
-      "mail": "arnaud.ruffault@gmail.com"
+      "description": "Coucou les gens!",
+      "mail": "arnaud.ruffault@gmail.com",
+      "adresses": [
+        {
+          "id": 1,
+          "adresseLigne1": "101 avenue du Pirée",
+          "adresseLigne2": "résidence le Moulin",
+          "ville": "Montpellier",
+          "codePostal": 34000,
+          "pays": "France"
+        },
+        {
+          "id": 2,
+          "adresseLigne1": "101 avenue Charles de Gaulle",
+          "adresseLigne2": "résidence La coccinelle",
+          "ville": "Montpellier",
+          "codePostal": 34000,
+          "pays": "France"
+        }
+      ]
     },
     {
       "id": 2,
@@ -18,7 +36,17 @@
       "password": "smash",
       "civilite": 0,
       "description": "Excellent",
-      "mail": "jeremy.ptak@gmail.com"
+      "mail": "jeremy.ptak@gmail.com",
+      "adresses": [
+        {
+          "id": 3,
+          "adresseLigne1": "455  avenue des apothicaires",
+          "adresseLigne2": "",
+          "ville": "Montpellier",
+          "codePostal": 34000,
+          "pays": "France"
+        }
+      ]
     },
     {
       "id": 3,
@@ -28,7 +56,17 @@
       "password": "ahbon",
       "civilite": 0,
       "description": "Ah bonn",
-      "mail": "nico.briand@gmail.com"
+      "mail": "nico.briand@gmail.com",
+      "adresses": [
+        {
+          "id": 4,
+          "adresseLigne1": "1 rue Granier",
+          "adresseLigne2": "",
+          "ville": "Montpellier",
+          "codePostal": 34000,
+          "pays": "France"
+        }
+      ]
     },
     {
       "id": 4,
@@ -38,75 +76,39 @@
       "password": "dormir",
       "civilite": 0,
       "description": "",
-      "mail": "ahmed.hamzaoui@gmail.com"
-    }
-  ],
-  "adresses": [
-    {
-      "id": 1,
-      "adresseLigne1": "101 avenue du Pirée",
-      "adresseLigne2": "résidence le Moulin",
-      "ville": "Montpellier",
-      "codePostal": 34000,
-      "pays": "France",
-      "userId": 1
-    },
-    {
-      "id": 2,
-      "adresseLigne1": "1 rue Granier",
-      "adresseLigne2": "",
-      "ville": "Montpellier",
-      "codePostal": 34000,
-      "pays": "France",
-      "userId": 3
-    },
-    {
-      "id": 3,
-      "adresseLigne1": "1 rue des lilas",
-      "adresseLigne2": "résidence Le perchoir",
-      "ville": "Toulouse",
-      "codePostal": 31000,
-      "pays": "France",
-      "userId": 1
-    },
-    {
-      "id": 4,
-      "adresseLigne1": "101 avenue du Pirée",
-      "adresseLigne2": "résidence le Moulin",
-      "ville": "Montpellier",
-      "codePostal": 34000,
-      "pays": "France",
-      "userId": 2
-    },
-    {
-      "id": 5,
-      "adresseLigne1": "455  avenue des apothicaires",
-      "adresseLigne2": "",
-      "ville": "Montpellier",
-      "codePostal": 34000,
-      "pays": "France",
-      "userId": 4
+      "mail": "ahmed.hamzaoui@gmail.com",
+      "adresses": [
+        {
+          "id": 5,
+          "adresseLigne1": "455 rue des Lilas",
+          "adresseLigne2": "",
+          "ville": "Montpellier",
+          "codePostal": 34000,
+          "pays": "France",
+          "userId": 4
+        }
+      ]
     }
   ],
   "categories": [
     {
       "id": 1,
-      "intitulé": "vélo",
+      "intitule": "vélo",
       "description": "vélo non motorisé"
     },
     {
       "id": 2,
-      "intitulé": "vélo éléctrique",
+      "intitule": "vélo éléctrique",
       "description": "vélo motorisé"
     },
     {
       "id": 3,
-      "intitulé": "trotinette",
+      "intitule": "trotinette",
       "description": "trotinette non motorisée"
     },
     {
       "id": 4,
-      "intitulé": "trotinette éléctrique",
+      "intitule": "trotinette éléctrique",
       "description": "trotinette motorisée"
     }
   ],
@@ -131,15 +133,194 @@
   "vehicules": [
     {
       "id": 1,
-      "intitulé": "neuf",
+      "intitule": "Mon beau vélo",
       "marque": "decathlon",
-      "idUser": 1,
-      "idEtat": 2,
-      "idCategorie": 1,
+      "loueur": {
+        "id": 2,
+        "prenom": "Jérémy",
+        "nom": "PTAK",
+        "pseudo": "Jayjay",
+        "password": "smash",
+        "civilite": 0,
+        "description": "Excellent",
+        "mail": "jeremy.ptak@gmail.com",
+        "adresses": [
+          {
+            "id": 3,
+            "adresseLigne1": "455  avenue des apothicaires",
+            "adresseLigne2": "",
+            "ville": "Montpellier",
+            "codePostal": 34000,
+            "pays": "France"
+          }
+        ]
+      },
+      "etat": {
+        "id": 1,
+        "intitulé": "neuf"
+      },
+      "categorie": {
+        "id": 1,
+        "intitule": "vélo",
+        "description": "vélo non motorisé"
+      },
       "isAvailable": true,
-      "idAdresse": 1,
-      "description": "super vélo de ville",
-      "photo": ""
+      "adresse": {
+        "id": 3,
+        "adresseLigne1": "455  avenue des apothicaires",
+        "adresseLigne2": "",
+        "ville": "Montpellier",
+        "codePostal": 34000,
+        "pays": "France"
+      },
+      "description": "super trotinette éléctrique de la mort",
+      "photo": "velo.jpg"
+    },
+    {
+      "id": 2,
+      "intitule": "trotinette motorisée",
+      "marque": "michelin",
+      "loueur": {
+        "id": 2,
+        "prenom": "Jérémy",
+        "nom": "PTAK",
+        "pseudo": "Jayjay",
+        "password": "smash",
+        "civilite": 0,
+        "description": "Excellent",
+        "mail": "jeremy.ptak@gmail.com",
+        "adresses": [
+          {
+            "id": 3,
+            "adresseLigne1": "455  avenue des apothicaires",
+            "adresseLigne2": "",
+            "ville": "Montpellier",
+            "codePostal": 34000,
+            "pays": "France"
+          }
+        ]
+      },
+      "etat": {
+        "id": 2,
+        "intitulé": "bon état"
+      },
+      "categorie": {
+        "id": 4,
+        "intitule": "trotinette éléctrique",
+        "description": "trotinette motorisée"
+      },
+      "isAvailable": true,
+      "adresse": {
+        "adresseLigne1": "101 avenue du Pirée",
+        "adresseLigne2": "résidence le Moulin",
+        "ville": "Montpellier",
+        "codePostal": 34000,
+        "pays": "France"
+      },
+      "description": "super trottinette !!",
+      "photo": "trot.jpg"
+    }
+  ],
+  "annonces": [
+    {
+      "id": 1,
+      "vehicule": {
+        "id": 1,
+        "intitule": "neuf",
+        "marque": "decathlon",
+        "loueur": {
+          "id": 1,
+          "prenom": "Arnaud",
+          "nom": "RUFFAULT",
+          "pseudo": "Nono",
+          "password": "test",
+          "civilite": 0,
+          "description": "Coucou les gens!",
+          "mail": "arnaud.ruffault@gmail.com",
+          "adresses": [
+            {
+              "adresseLigne1": "101 avenue du Pirée",
+              "adresseLigne2": "résidence le Moulin",
+              "ville": "Montpellier",
+              "codePostal": 34000,
+              "pays": "France"
+            },
+            {
+              "adresseLigne1": "101 avenue du Pirée",
+              "adresseLigne2": "résidence le Moulin",
+              "ville": "Montpellier",
+              "codePostal": 34000,
+              "pays": "France"
+            }
+          ]
+        },
+        "etat": {
+          "id": 2,
+          "intitulé": "bon état"
+        },
+        "categorie": {
+          "id": 1,
+          "intitule": "vélo",
+          "description": "vélo non motorisé"
+        },
+        "isAvailable": true,
+        "adresse": {
+          "adresseLigne1": "101 avenue du Pirée",
+          "adresseLigne2": "résidence le Moulin",
+          "ville": "Montpellier",
+          "codePostal": 34000,
+          "pays": "France"
+        },
+        "description": "super vélo de ville",
+        "photo": "velo.jpg"
+      }
+    },
+    {
+      "id": 2,
+      "vehicule": {
+        "id": 2,
+        "intitule": "trotinette motorisée",
+        "marque": "michelin",
+        "loueur": {
+          "id": 2,
+          "prenom": "Jérémy",
+          "nom": "PTAK",
+          "pseudo": "Jayjay",
+          "password": "smash",
+          "civilite": 0,
+          "description": "Excellent",
+          "mail": "jeremy.ptak@gmail.com",
+          "adresses": [
+            {
+              "id": 3,
+              "adresseLigne1": "455  avenue des apothicaires",
+              "adresseLigne2": "",
+              "ville": "Montpellier",
+              "codePostal": 34000,
+              "pays": "France"
+            }
+          ]
+        },
+        "etat": {
+          "id": 2,
+          "intitulé": "bon état"
+        },
+        "categorie": {
+          "id": 4,
+          "intitule": "trotinette éléctrique",
+          "description": "trotinette motorisée"
+        },
+        "isAvailable": true,
+        "adresse": {
+          "adresseLigne1": "101 avenue du Pirée",
+          "adresseLigne2": "résidence le Moulin",
+          "ville": "Montpellier",
+          "codePostal": 34000,
+          "pays": "France"
+        },
+        "description": "super trottinette !!",
+        "photo": "trot.jpg"
+      }
     }
   ]
 }
