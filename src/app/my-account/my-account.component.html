@@ -1,10 +1,10 @@
 <div class="container">
   <div class="usersCount">
-    <h3 *ngIf="users">Hello {{ user.pseudo }}</h3>
     <div class="userInformation">
         <mat-tab-group mat-align-tabs="center">
             <mat-tab label="Compte">
               <mat-icon>person</mat-icon><br/><br/>
+              <h3 *ngIf="users">Hello {{ user.pseudo }}</h3>
               <p>Nom : {{ user.nom }}</p>
               <p>Prénom : {{ user.prenom }}</p>
               <p>Pseudo : {{ user.pseudo }}</p>
@@ -15,9 +15,13 @@
             </mat-tab>
             <mat-tab label="Mes produits à louer">
               <mat-icon>directions_bike</mat-icon><br/><br/>
-              <button (click)="modifyLocation()">Modifer la location</button>
-              <button (click)="addLocation()">Ajouter une location</button>
-              <button (click)="deleteLocation()">Supprimer une location</button>
+              <img class="imgVelo" src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+          alt="velo">
+          <p>Annonce : Bike BWIN à louer</p>
+
+              <button class="modify" mat-button mat-flat-button color="primary" (click)="modifyLocation()">Modifer</button>
+              <button class="add" mat-button mat-flat-button color="primary" (click)="addLocation()">Ajouter</button>
+              <button class="delete" mat-button mat-flat-button color="primary" (click)="deleteLocation()">Supprimer</button>
             </mat-tab>
             <mat-tab label="Les produits que j'emprunte"><mat-icon>people</mat-icon>  
             
