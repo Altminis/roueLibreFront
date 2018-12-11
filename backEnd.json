@@ -90,76 +90,15 @@
       ]
     }
   ],
-  "categories": [
-    {
-      "id": 1,
-      "intitule": "vélo",
-      "description": "vélo non motorisé"
-    },
-    {
-      "id": 2,
-      "intitule": "vélo éléctrique",
-      "description": "vélo motorisé"
-    },
-    {
-      "id": 3,
-      "intitule": "trotinette",
-      "description": "trotinette non motorisée"
-    },
-    {
-      "id": 4,
-      "intitule": "trotinette éléctrique",
-      "description": "trotinette motorisée"
-    }
-  ],
-  "etats": [
-    {
-      "id": 1,
-      "intitulé": "neuf"
-    },
-    {
-      "id": 2,
-      "intitulé": "bon état"
-    },
-    {
-      "id": 3,
-      "intitulé": "correct"
-    },
-    {
-      "id": 4,
-      "intitulé": "mauvais état"
-    }
-  ],
   "vehicules": [
     {
       "id": 1,
       "intitule": "Mon beau vélo",
       "marque": "decathlon",
-      "loueurId": 2,
       "userId": 1,
-      "loueur": {
-        "id": 2,
-        "prenom": "Jérémy",
-        "nom": "PTAK",
-        "pseudo": "Jayjay",
-        "password": "smash",
-        "civilite": 0,
-        "description": "Excellent",
-        "mail": "jeremy.ptak@gmail.com",
-        "adresses": [
-          {
-            "id": 3,
-            "adresseLigne1": "455  avenue des apothicaires",
-            "adresseLigne2": "",
-            "ville": "Montpellier",
-            "codePostal": 34000,
-            "pays": "France"
-          }
-        ]
-      },
       "etat": {
         "id": 1,
-        "intitulé": "neuf"
+        "intitule": "neuf"
       },
       "categorie": {
         "id": 1,
@@ -182,31 +121,10 @@
       "id": 2,
       "intitule": "trotinette motorisée",
       "marque": "michelin",
-      "loueurId": 1,
-      "userId": 1,
-      "loueur": {
-        "id": 2,
-        "prenom": "Jérémy",
-        "nom": "PTAK",
-        "pseudo": "Jayjay",
-        "password": "smash",
-        "civilite": 0,
-        "description": "Excellent",
-        "mail": "jeremy.ptak@gmail.com",
-        "adresses": [
-          {
-            "id": 3,
-            "adresseLigne1": "455  avenue des apothicaires",
-            "adresseLigne2": "",
-            "ville": "Montpellier",
-            "codePostal": 34000,
-            "pays": "France"
-          }
-        ]
-      },
+      "userId": 2,
       "etat": {
         "id": 2,
-        "intitulé": "bon état"
+        "intitule": "bon état"
       },
       "categorie": {
         "id": 4,
@@ -228,12 +146,12 @@
   "annonces": [
     {
       "id": 1,
-      "loueurId": 2,
+      "userId": 2,
       "vehiculeId": 2
     },
     {
       "id": 2,
-      "loueurId": 2,
+      "userId": 1,
       "vehiculeId": 1
     }
   ]
