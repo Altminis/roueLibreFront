@@ -26,6 +26,9 @@ export class ListeAnnoncesComponent implements OnInit {
         this.annonces = new MatTableDataSource(annonces);
       }
     )
+    this.annonceService.getAnnonce(1).subscribe(
+      annonce => console.log(annonce)
+    )
   }
 
   getUrlPhoto(namePhoto : string){
