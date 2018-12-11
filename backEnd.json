@@ -154,5 +154,14 @@
       "userId": 1,
       "vehiculeId": 1
     }
+  ],
+  "messages": [
+    {
+      "email": "kjkj@kjb",
+      "typeDemande": "remerciement",
+      "titreMessage": "s",
+      "contenuMessage": "d",
+      "id": 1
+    }
   ]
 }
