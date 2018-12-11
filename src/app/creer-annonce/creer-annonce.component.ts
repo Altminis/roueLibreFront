@@ -20,4 +20,10 @@ export class CreerAnnonceComponent implements OnInit {
   ngOnInit() {
   }
 
+  ajouterAnnonce(){
+    if(this.annonceForm.valid){
+
+    }
+  }
+
 }

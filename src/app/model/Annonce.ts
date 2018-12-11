@@ -5,6 +5,6 @@ export class Annonce {
     id? : number
     user : User
     vehicule : Vehicule
-    debut : string
-    fin : string
+    debut : Date
+    fin : Date
 }
