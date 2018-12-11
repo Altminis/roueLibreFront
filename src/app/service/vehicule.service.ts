@@ -27,12 +27,8 @@ export class VehiculeService {
   }
 
   getVehicules(user: User): Observable<Vehicule[]> {
-    if (user === undefined) {
-      return this.http.get<Vehicule[]>(environment.backURL + '/vehicules');
-
-    } else {
       return this.http.get<Vehicule[]>(environment.backURL + `/users/${user.id}/vehicules`);
-    }
+
   }
 
   
