@@ -1,31 +1,38 @@
 <div class="container">
   <div class="usersCount">
-    <h3 *ngIf="users">Hello {{ user.pseudo }}</h3>
     <div class="userInformation">
-        <mat-tab-group mat-align-tabs="center">
-            <mat-tab label="Compte">
-              <mat-icon>person</mat-icon><br/><br/>
-              <p>Nom : {{ user.nom }}</p>
-              <p>Prénom : {{ user.prenom }}</p>
-              <p>Pseudo : {{ user.pseudo }}</p>
-              <p>Email : {{ user.mail }}</p>
-              <p>Description : {{ user.description }}</p>
-              <br/><br/>
-              <button  mat-button mat-flat-button color="primary" [routerLink]="['/modification']">Modifer le profil</button>
-            </mat-tab>
-            <mat-tab label="Mes produits à louer">
-              <mat-icon>directions_bike</mat-icon><br/><br/>
-              <button (click)="modifyLocation()">Modifer la location</button>
-              <button (click)="addLocation()">Ajouter une location</button>
-              <button (click)="deleteLocation()">Supprimer une location</button>
-            </mat-tab>
-            <mat-tab label="Les produits que j'emprunte"><mat-icon>people</mat-icon>  
-            
-            </mat-tab>
-          </mat-tab-group>
+      <mat-tab-group mat-align-tabs="center">
+        <mat-tab label="Compte">
+          <mat-icon>person</mat-icon><br /><br />
+          <p>Nom : {{ user.nom }}</p>
+          <p>Prénom : {{ user.prenom }}</p>
+          <p>Pseudo : {{ user.pseudo }}</p>
+          <p>Email : {{ user.mail }}</p>
+          <p>Description : {{ user.description }}</p>
+          <br /><br />
+          <button mat-button mat-flat-button color="primary" [routerLink]="['/modification']">Modifer le profil</button>
+        </mat-tab>
 
-          
+        <mat-tab label="Mes véhicules">
+          <mat-icon>how_to_reg</mat-icon><br /><br />
+          <app-vehicules></app-vehicules>
+        </mat-tab>
+
+        <mat-tab label="Mes produits à louer">
+          <mat-icon>directions_bike</mat-icon><br /><br />
+
+          <button class="modify" mat-button mat-flat-button color="primary" (click)="modifyLocation()">Modifer</button>
+          <button class="add" mat-button mat-flat-button color="primary" (click)="addLocation()">Ajouter</button>
+          <button class="delete" mat-button mat-flat-button color="primary" (click)="deleteLocation()">Supprimer</button>
+        </mat-tab>
+
+        <mat-tab label="Les produits que j'emprunte">
+          <mat-icon>people</mat-icon>
+
+        </mat-tab>
+      </mat-tab-group>
+
+
     </div>
   </div>
 </div>
-
