@@ -12,6 +12,7 @@ import { ContactUsComponent } from "./contact-us/contact-us.component";
 import { ListeAnnoncesComponent } from "./liste-annonces/liste-annonces.component";
 import { SubscriptionComponent } from "./subscription/subscription.component";
 import { AnnonceComponent } from "./liste-annonces/annonce/annonce.component";
+import { CreerAnnonceComponent } from "./creer-annonce/creer-annonce.component";
 
 
 
@@ -27,6 +28,7 @@ const routes: Routes = [
     {path: "annonces/:id", component: AnnonceComponent},
     { path: 'subscription', component: SubscriptionComponent },
     { path: '', component: HomeComponent },
+    { path: 'myaccount/creer-annonce', component: CreerAnnonceComponent, canActivate: [LoggedInGuard] },
     { path: 'not-found', component: ErrorComponent },
     { path: '**', redirectTo: 'not-found' }
 

@@ -36,7 +36,6 @@ export class LoginComponent implements OnInit {
       } else {
         this.errorMessage = "La connexion a echoué, vérifiez votre pseudo et votre mot de passe";
       }
-    });
-    
+    }); 
   }
 }
