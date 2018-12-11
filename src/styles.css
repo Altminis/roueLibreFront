@@ -1,18 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 
+/*
 html {
     position: relative;
     min-height: 100%;
     } 
+*/
 
 body { 
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
     }
 
-footer {
-    background-color:#DCDCDC;
-    text-align: center;
-    font-size: small;
-    margin-top: 50px;
-    }
+#page-container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:"h"
+                        "c"
+                        "f";
+}
+
+#header-container {
+    grid-area: h;
+}
+
+#content-container {
+    grid-area: c;
+}
+
+#footer-container {
+    grid-area: f;
+}
