@@ -7,14 +7,41 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  numeros= ["1", "2", "3"];
-  velos= [];
+  velosTop3 = [];
+  velos = [];
   constructor() { }
 
   ngOnInit() {
-    for(let i = 2; i <11; i++){
-      this.velos.push(environment.imagesURL + "velo"+i+".jpeg");
-    }
+    this.generateTableTop3();
+    this.generateTableAnnounce();
+  }
+
+  generateTableTop3() {
+    for (let i = 2; i < 5; i++) {
+      this.velosTop3.push(
+        {
+          "veloPic": environment.imagesURL + "velo" + i + ".jpeg",
+          "userPic": environment.imagesURL + "user" + i + ".jpeg",
+          "pseudo": "pseudo" + i
+        }
+      );
+    };
+  }
+
+  generateTableAnnounce() {
+    for (let i = 2; i < 11; i++) {
+      this.velos.push(
+        {
+          "veloPic": environment.imagesURL + "velo" + i + ".jpeg",
+          "userPic": environment.imagesURL + "user" + i + ".jpeg",
+          "pseudo": "pseudo" + i
+        }
+      );
+    };
   }
 
 }
+
+
+
+
