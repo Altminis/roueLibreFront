@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { AnnoncePopupComponent } from '../annonce-popup/annonce-popup.component';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +11,7 @@ import { environment } from 'src/environments/environment';
 export class HomeComponent implements OnInit {
   velosTop3 = [];
   velos = [];
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
     this.generateTableTop3();
@@ -38,6 +40,15 @@ export class HomeComponent implements OnInit {
         }
       );
     };
+  }
+
+  openDialog(){
+    debugger;
+    const dialogRef = this.dialog.open(AnnoncePopupComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
 }

@@ -46,7 +46,7 @@
     <div class="row">
       <div class="col-sm-6 col-md-4" *ngFor="let velo of velos">
         <div class="card" style="max-width: 18rem;">
-          <img class="imgVelo rounded mx-auto d-block img-thumbnail img-fluid" [src]="velo.veloPic" alt="velo">
+          <img class="imgVelo rounded mx-auto d-block img-thumbnail img-fluid" [src]="velo.veloPic" alt="velo" (click)="openDialog()">
           <p class="pseudo">{{velo.pseudo}}</p>
           <img [src]="velo.userPic" alt="" class="rounded-circle userPicture">
         </div>
