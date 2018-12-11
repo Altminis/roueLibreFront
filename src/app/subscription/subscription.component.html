@@ -1,9 +1,9 @@
 <div class="container subscriptionForm">
-  <form>
+  <form (ngSubmit)="inscription()" [formGroup]="userForm">
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputEmail">Email</label>
-        <input type="email" class="form-control" id="inputEmail" placeholder="Email" [formControl]="email" (keyup)="checkEmail($event)"
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email" formControlName="email" (keyup)="checkEmail($event)"
           [class.is-valid]="emailIsValid && !pristineEmail" [class.is-invalid]="!emailIsValid && !pristineEmail">
         <div class="valid-feedback">
           Looks good!
@@ -14,11 +14,11 @@
       </div>
       <div class="form-group col-md-6">
         <label for="inputPassword">Password</label>
-        <input type="password" class="form-control" id="inputPassword" placeholder="Password" [formControl]="password">
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password" formControlName="password">
       </div>
       <div class="form-group col-md-6">
         <label for="inputPseudo">Pseudo</label>
-        <input type="text" class="form-control" id="inputPseudo" placeholder="Pseudo" [formControl]="pseudo" (keyup)="checkPseudo($event)"
+        <input type="text" class="form-control" id="inputPseudo" placeholder="Pseudo" formControlName="pseudo" (keyup)="checkPseudo($event)"
           [class.is-valid]="pseudoIsValid && !pristinePseudo" [class.is-invalid]="!pseudoIsValid && !pristinePseudo">
         <div class="valid-feedback">
           Looks good!
@@ -31,34 +31,34 @@
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputPrénom">Prénom</label>
-        <input type="text" class="form-control" id="inputPrénom" placeholder="Prénom" [formControl]="prenom">
+        <input type="text" class="form-control" id="inputPrénom" placeholder="Prénom" formControlName="prenom">
       </div>
       <div class="form-group col-md-6">
         <label for="inputNom">Nom</label>
-        <input type="text" class="form-control" id="inputNom" placeholder="Nom" [formControl]="nom">
+        <input type="text" class="form-control" id="inputNom" placeholder="Nom" formControlName="nom">
       </div>
     </div>
     <div class="form-group">
       <label for="inputAddress">Adresse</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="123 Avenue de Toulouse" [formControl]="adresse">
+      <input type="text" class="form-control" id="inputAddress" placeholder="123 Avenue de Toulouse" formControlName="adresse">
     </div>
     <div class="form-group">
       <label for="inputAddress2">Adresse 2</label>
       <input type="text" class="form-control" id="inputAddress2" placeholder="Appartement, étages, résidences"
-        [formControl]="adresse2" name="">
+        formControlName="adresse2" name="">
     </div>
     <div class="form-row d-flex justify-content-between">
       <div class="form-group col-md-6">
         <label for="inputCity">Ville</label>
-        <input type="text" class="form-control" id="inputCity" [formControl]="ville" placeholder="Montpellier">
+        <input type="text" class="form-control" id="inputCity" formControlName="ville" placeholder="Montpellier">
       </div>
       <div class="form-group col-md-2">
         <label for="inputZip">Code postal</label>
-        <input type="text" class="form-control" id="inputZip" [formControl]="codepostal">
+        <input type="text" class="form-control" id="inputZip" formControlName="codepostal">
       </div>
       <div class="form-group col-md-2">
         <label for="inputPays">Pays</label>
-        <input type="text" class="form-control" id="inputPays" [formControl]="pays" placeholder="France">
+        <input type="text" class="form-control" id="inputPays" formControlName="pays" placeholder="France">
       </div>
     </div>
     <div class="form-group">
@@ -70,7 +70,7 @@
       </div>
     </div>
     <div class="d-flex justify-content-center">
-      <button type="submit" class="btn btn-primary" (ngSubmit)="onSubmit(areasForm.value)">S'inscrire !</button>
+      <button type="submit" class="btn btn-primary">S'inscrire !</button>
     </div>
   </form>
 </div>
