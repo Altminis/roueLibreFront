@@ -1,0 +1,10 @@
+<div class="vehicules">
+  <mat-list role="list">
+    <mat-list-item *ngFor="let vehicule of vehicules">
+      <p mat-line>Intitulé: {{ vehicule.intitule }} </p><br/>
+      <p mat-line>Marque : {{ vehicule.marque }}</p><br/>
+      <p mat-line>Description : {{ vehicule.description }}</p><br/>
+      <img class="imgVehicule" [src]="getUrlPhoto(vehicule.photo)" /> 
+    </mat-list-item>
+  </mat-list>
+</div>
