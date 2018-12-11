@@ -25,10 +25,13 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { MatSelectModule } from '@angular/material/select';
 import { ListeAnnoncesComponent } from './liste-annonces/liste-annonces.component';
 import { VehiculesComponent } from './vehicules/vehicules.component';
-import { VehiculeComponent } from './vehicule/vehicule.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
 import {MatListModule} from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { AnnonceComponent } from './liste-annonces/annonce/annonce.component';
+import { VehiculeComponent } from './vehicules/vehicule/vehicule.component';
+import { AddVehiculeComponent } from './add-vehicule/add-vehicule.component';
 
 
 
@@ -49,7 +52,8 @@ import { AnnonceComponent } from './liste-annonces/annonce/annonce.component';
     ListeAnnoncesComponent,
     VehiculesComponent,
     VehiculeComponent,
-    AnnonceComponent
+    AnnonceComponent,
+    AddVehiculeComponent
 
   ],
   imports: [
@@ -68,7 +72,8 @@ import { AnnonceComponent } from './liste-annonces/annonce/annonce.component';
     MatButtonModule,
     MatSelectModule,
     MatTableModule,
-    MatListModule
+    MatListModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

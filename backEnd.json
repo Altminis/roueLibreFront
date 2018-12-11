@@ -221,6 +221,13 @@
       },
       "description": "super trottinette !!",
       "photo": "trot.jpg"
+    },
+    {
+      "intitule": "sdfsd",
+      "marque": "sdfsdf",
+      "description": "sdfsdf",
+      "photo": "http://localhost:3000/images/trot.jpg",
+      "id": 3
     }
   ],
   "annonces": [
@@ -323,6 +330,26 @@
         "description": "super trottinette !!",
         "photo": "trot.jpg"
       }
+    }
+  ],
+  "photos": [
+    {
+      "name": "trot.jpg"
+    },
+    {
+      "name": "velo.jpg"
+    },
+    {
+      "name": "velo2.jpg"
+    },
+    {
+      "name": "velo3.jpg"
+    },
+    {
+      "name": "velo4.jpg"
+    },
+    {
+      "name": "velo5.jpg"
     }
   ]
 }

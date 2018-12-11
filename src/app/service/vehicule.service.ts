@@ -3,7 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { Vehicule } from '../model/Vehicule';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { User } from '../model/User';
+import { Photo } from '../model/Photo';
 
 @Injectable({
   providedIn: 'root'
@@ -18,8 +20,8 @@ export class VehiculeService {
     return this.http.get<Vehicule>(environment.backURL + '/vehicules/' + id);
   }
 
-  addVehicules(vehicules) {
-    return this.http.post(environment.backURL + '/vehicules', vehicules);
+  addVehicule(vehicule: Vehicule): Observable<Vehicule> {
+    return this.http.post<Vehicule>(environment.backURL + '/vehicules', vehicule);
   }
 
   deleteVehculesById(id: number) {
@@ -33,6 +35,15 @@ export class VehiculeService {
     } else {
       return this.http.get<Vehicule[]>(environment.backURL + `/users/${user.id}/vehicules`);
     }
+  }
+
+  getAvailablePhotos(): Observable<Photo[]> {
+    return this.http.get<Photo[]>(environment.backURL + `/photos`).pipe(
+      map(photos => {
+        photos.forEach(photo => photo.name = environment.imagesURL + photo.name);
+        return photos;
+      })
+    );
   }
 
   

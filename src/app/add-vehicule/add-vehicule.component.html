@@ -1,0 +1,20 @@
+<h3>Ajout d'un véhicule</h3>
+<form (ngSubmit)="addVehicule()" [formGroup]="addVehiculeForm">
+    <mat-form-field>
+      <input matInput formControlName="intitule" >
+      <mat-error *ngIf="intituleCtrl.hasError('required')">Intitulé obligatoire</mat-error>
+    </mat-form-field><br />
+    <mat-form-field>
+      <input matInput formControlName="marque">
+      <mat-error *ngIf="marqueCtrl.hasError('required')">Marque obligatoire</mat-error>
+    </mat-form-field><br />
+    <mat-form-field>
+      <input matInput formControlName="description">
+      <mat-error *ngIf="descriptionCtrl.hasError('required')">Description obligatoire</mat-error>
+    </mat-form-field><br />
+    <div id="photo_availables">
+      <img *ngFor="let photo of photos" src="{{photo.name}}" (click)="selectPhoto(photo)"/>
+    </div>
+    <button  mat-button mat-flat-button color="primary" type="submit" [disabled]="addVehiculeForm.invalid">Valider</button>
+      
+  </form>
