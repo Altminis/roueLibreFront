@@ -26,12 +26,14 @@ import { MatSelectModule } from '@angular/material/select';
 import { ListeAnnoncesComponent } from './liste-annonces/liste-annonces.component';
 import { VehiculesComponent } from './vehicules/vehicules.component';
 import { VehiculeComponent } from './vehicule/vehicule.component';
-import {MatListModule} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { AnnonceComponent } from './liste-annonces/annonce/annonce.component';
 import { CreerAnnonceComponent } from './creer-annonce/creer-annonce.component';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { AnnoncePopupComponent } from './annonce-popup/annonce-popup.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -53,7 +55,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     VehiculesComponent,
     VehiculeComponent,
     AnnonceComponent,
-    CreerAnnonceComponent
+    CreerAnnonceComponent,
+    AnnoncePopupComponent,
 
   ],
   imports: [
@@ -74,9 +77,11 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatTableModule,
     MatListModule,
     MatDatepickerModule,
-    MatNativeDateModule 
+    MatNativeDateModule,
+    MatDialogModule
   ],
   providers: [MatDatepickerModule],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AnnoncePopupComponent]
 })
 export class AppModule { }
