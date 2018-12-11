@@ -19,9 +19,11 @@ export class AuthService {
   signIn(pseudo: string, password: string): Observable<boolean> {
     return this.userService.getUserByPseudo(pseudo)
     .pipe(
-      map(user => {
-        this.user = user;
-        this.isAuth = user != null && user.password === password;
+      map(user => {       
+        if(user != null && user.password === password){
+          this.isAuth = true ;
+          this.user = user;
+        }      
         return this.isAuth;
       }));
   }

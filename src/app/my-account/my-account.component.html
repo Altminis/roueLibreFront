@@ -22,7 +22,7 @@
           <mat-icon>directions_bike</mat-icon><br /><br />
 
           <button class="modify" mat-button mat-flat-button color="primary" (click)="modifyLocation()">Modifer</button>
-          <button class="add" mat-button mat-flat-button color="primary" (click)="addLocation()">Ajouter</button>
+          <button class="add" mat-button mat-flat-button color="primary" [routerLink]="['creer-annonce']">Ajouter</button>
           <button class="delete" mat-button mat-flat-button color="primary" (click)="deleteLocation()">Supprimer</button>
         </mat-tab>
 

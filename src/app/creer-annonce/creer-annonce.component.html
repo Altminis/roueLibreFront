@@ -1,0 +1,9 @@
+<h2>Créer une annonce</h2>
+<form (ngSubmit)="ajouterAnnonce()" [formGroup]="annonceForm">
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="debut">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <button mat-button mat-flat-button color="primary" type="submit" [disabled]="annonceForm.invalid">Ajouter</button>
+</form>

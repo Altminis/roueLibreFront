@@ -7,8 +7,9 @@
       "pseudo": "Nono",
       "password": "test",
       "civilite": 0,
-      "description": "Coucou les gens",
+      "description": "Coucou les gens!!",
       "mail": "arnaud.ruffault@gmail.com",
+      "photo": "",
       "adresses": [
         {
           "id": 1,
@@ -37,6 +38,7 @@
       "civilite": 0,
       "description": "Excellent",
       "mail": "jeremy.ptak24@gmail.com",
+      "photo": "",
       "adresses": [
         {
           "id": 3,
@@ -57,6 +59,7 @@
       "civilite": 0,
       "description": "Ah bonn",
       "mail": "nico.briand@gmail.com",
+      "photo": "",
       "adresses": [
         {
           "id": 4,
@@ -76,6 +79,7 @@
       "password": "dormir",
       "civilite": 0,
       "description": "",
+      "photo": "",
       "mail": "ahmed.hamzaoui@gmail.com",
       "adresses": [
         {
@@ -88,6 +92,22 @@
           "userId": 4
         }
       ]
+    },
+    {
+      "prenom": "Madeleine",
+      "nom": "Salvagniac",
+      "pseudo": "mad347",
+      "mail": "madeleine347@gmail.com",
+      "adresses": [
+        {
+          "adresseLigne1": "123 avenue de boulini",
+          "adresseLigne2": "12",
+          "ville": "Castelnau",
+          "codePostal": "34170",
+          "pays": "France"
+        }
+      ],
+      "id": 8
     }
   ],
   "vehicules": [
@@ -147,12 +167,16 @@
     {
       "id": 1,
       "userId": 2,
-      "vehiculeId": 2
+      "vehiculeId": 2,
+      "debut": 1544621958,
+      "fin" : 1545140358
     },
     {
       "id": 2,
       "userId": 1,
-      "vehiculeId": 1
+      "vehiculeId": 1,
+      "debut": 1547818758,
+      "fin" : 1549373958
     }
   ],
   "messages": [
