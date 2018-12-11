@@ -10,4 +10,5 @@ export class User {
     description: string;
     mail: string;
     adresses : Adresse[];
+    photo : string;
 }
