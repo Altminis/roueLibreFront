@@ -39,6 +39,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { AnnoncePopupComponent } from './annonce-popup/annonce-popup.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { VehiculeComponent } from './vehicules/vehicule/vehicule.component';
+import { ListMesLocationsComponent } from './my-account/list-mes-locations/list-mes-locations.component';
 
 
 
@@ -62,7 +63,8 @@ import { VehiculeComponent } from './vehicules/vehicule/vehicule.component';
     AnnonceComponent,
     AddVehiculeComponent,
     CreerAnnonceComponent,
-    AnnoncePopupComponent
+    AnnoncePopupComponent,
+    ListMesLocationsComponent
 
   ],
   imports: [

@@ -43,7 +43,6 @@ export class HomeComponent implements OnInit {
   }
 
   openDialog(){
-    debugger;
     const dialogRef = this.dialog.open(AnnoncePopupComponent);
 
     dialogRef.afterClosed().subscribe(result => {
