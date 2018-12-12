@@ -9,7 +9,7 @@
       "civilite": 0,
       "description": "Coucou les gens!!",
       "mail": "arnaud.ruffault@gmail.com",
-      "photo": "",
+      "photo": "user2.jpeg",
       "adresses": [
         {
           "id": 1,
@@ -38,7 +38,7 @@
       "civilite": 0,
       "description": "Excellent",
       "mail": "jeremy.ptak24@gmail.com",
-      "photo": "",
+      "photo": "user3.jpeg",
       "adresses": [
         {
           "id": 3,
@@ -59,7 +59,7 @@
       "civilite": 0,
       "description": "Ah bonn",
       "mail": "nico.briand@gmail.com",
-      "photo": "",
+      "photo": "user5.jpeg",
       "adresses": [
         {
           "id": 4,
@@ -79,7 +79,7 @@
       "password": "dormir",
       "civilite": 0,
       "description": "",
-      "photo": "",
+      "photo": "user4.jpeg",
       "mail": "ahmed.hamzaoui@gmail.com",
       "adresses": [
         {
@@ -97,6 +97,7 @@
       "prenom": "Madeleine",
       "nom": "Salvagniac",
       "pseudo": "mad347",
+      "photo": "user4.jpeg",
       "mail": "madeleine347@gmail.com",
       "adresses": [
         {

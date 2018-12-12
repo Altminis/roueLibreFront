@@ -1,3 +1,30 @@
-<p>
-  annonce-popup works!
-</p>
+<nav class="navbar navbar-light bg-light">
+  <p>
+    <img [src]="userPic" alt="" class="rounded-circle navbar-brand userPic">Pseudo
+  </p>
+</nav>
+<div class="container">
+  <div class="row contenu">
+    <div class="col-sm">
+      <img [src]="veloPic" alt="" class="veloPic rounded">
+    </div>
+    <div class="col-sm">
+      <div class="description">
+        <ul class="descriptionListe">
+          <li>Catégorie : </li>
+          <li>Intitulé : </li>
+          <li>Marque : </li>
+          <li>Etat : </li>
+          <li>Description : </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm" style="text-align: center;">
+          <button class="actionButton">Louer</button>
+      </div>
+    </div>
+  </div>
+</div>

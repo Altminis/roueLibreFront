@@ -1,0 +1,46 @@
+.userPic{
+    width: 80px;
+    height: 80px;
+}
+
+.contenu{
+    margin: 40px 0;
+}
+
+.veloPic{
+    width: 300px;
+    height: 250px;
+}
+
+.description{
+    padding: 20px;
+    margin: 60px 60px 60px 20px;
+}
+
+.descriptionListe{
+    list-style: none;
+}
+.actionButton{
+    width: 220px;
+    height: 45px;
+    background-color: #42A8FF;
+    color: #fff;
+    border-radius: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 25px;
+    outline: none;
+    border: none;
+    box-shadow: 1px 1px rgba(45, 45, 45, 0.2);
+    transition: all 350ms cubic-bezier(.19,.23,.21,1.85);  
+    margin-bottom: 60px;
+  }
+  
+  .actionButton:hover{
+    transform:translateY(-5px);
+    box-shadow: 1px 3px rgba(45, 45, 45, 0.2);
+  }
+  
+  .actionButton:active{
+    transform:translateY(-2px);
+    box-shadow: 1px 1px rgba(45, 45, 45, 0.2);
+  }
