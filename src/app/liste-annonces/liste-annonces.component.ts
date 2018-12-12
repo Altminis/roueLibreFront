@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AnnoncesService } from '../service/annonces-service.service';
 import { Annonce } from '../model/Annonce';
-import { environment } from 'src/environments/environment';
 import { MatTableDataSource } from '@angular/material/table';
+import { VehiculeService } from '../service/vehicule.service';
+import { Photo } from '../model/Photo';
 
 @Component({
   selector: 'app-liste-annonces',
@@ -14,7 +15,7 @@ export class ListeAnnoncesComponent implements OnInit {
   annonces : MatTableDataSource<Annonce>
   displayedColumns: string[] = ['loueur', 'categorie', 'image', 'date', 'detail'];
 
-  constructor(private annonceService : AnnoncesService) { }
+  constructor(private annonceService : AnnoncesService, private vehiculeService: VehiculeService) { }
 
   ngOnInit() {
     this.refreshAnnonces();
@@ -28,8 +29,10 @@ export class ListeAnnoncesComponent implements OnInit {
     )
   }
 
-  getUrlPhoto(namePhoto : string){
-    return environment.imagesURL + namePhoto
+  getUrlPhoto(photo: Photo){
+    return this.vehiculeService.getUrlPhoto(photo);
   }
+
+  
 
 }

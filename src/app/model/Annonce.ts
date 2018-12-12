@@ -1,6 +1,3 @@
-import { Vehicule } from "./Vehicule";
-import { User } from "./User";
-
 export class Annonce {
     id? : number
     userId : number

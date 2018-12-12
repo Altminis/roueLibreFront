@@ -1,6 +1,7 @@
 import { Etat } from "./Etat";
 import { Adresse } from "./Adresse";
 import { Categorie } from "./Categorie";
+import { Photo } from "./Photo";
 
 
 export class Vehicule {
@@ -13,5 +14,5 @@ export class Vehicule {
     isAvailable?: boolean
     adresse?: Adresse
     description: string
-    photo: string
+    photoName: string
 }

@@ -1,20 +1,21 @@
 <h3>Ajout d'un véhicule</h3>
 <form (ngSubmit)="addVehicule()" [formGroup]="addVehiculeForm">
-    <mat-form-field>
-      <input matInput formControlName="intitule" >
-      <mat-error *ngIf="intituleCtrl.hasError('required')">Intitulé obligatoire</mat-error>
-    </mat-form-field><br />
-    <mat-form-field>
-      <input matInput formControlName="marque">
-      <mat-error *ngIf="marqueCtrl.hasError('required')">Marque obligatoire</mat-error>
-    </mat-form-field><br />
-    <mat-form-field>
-      <input matInput formControlName="description">
-      <mat-error *ngIf="descriptionCtrl.hasError('required')">Description obligatoire</mat-error>
-    </mat-form-field><br />
-    <div id="photo_availables">
-      <img *ngFor="let photo of photos" src="{{photo.name}}" (click)="selectPhoto(photo)"/>
-    </div>
-    <button  mat-button mat-flat-button color="primary" type="submit" [disabled]="addVehiculeForm.invalid">Valider</button>
-      
-  </form>
+  <mat-form-field>
+    <textarea matInput placeholder="Intitulé" formControlName="intitule"></textarea>
+    <mat-error *ngIf="intituleCtrl.hasError('required')">Intitulé obligatoire</mat-error>
+  </mat-form-field><br /><br />
+  <mat-form-field>
+    <textarea matInput placeholder="Marque" formControlName="marque"></textarea>
+    <mat-error *ngIf="marqueCtrl.hasError('required')">Marque obligatoire</mat-error>
+  </mat-form-field><br /><br />
+  <mat-form-field>
+    <textarea matInput placeholder="Description" formControlName="description"></textarea>
+    <mat-error *ngIf="descriptionCtrl.hasError('required')">Description obligatoire</mat-error>
+  </mat-form-field><br /><br />
+  <div id="photo_availables">
+    <p>Choisir une photo :</p><br />
+    <img [class.selected]="selectedPhoto && photo.name == selectedPhoto.name" *ngFor="let photo of photos" class="imgVehicule" [src]="getUrlPhoto(photo)" (click)="selectPhoto(photo)" />
+  </div>
+  <button mat-button mat-flat-button color="primary" type="submit" [disabled]="addVehiculeForm.invalid">Valider</button>
+
+</form>

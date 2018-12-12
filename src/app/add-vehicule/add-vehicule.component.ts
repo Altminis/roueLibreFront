@@ -53,8 +53,12 @@ export class AddVehiculeComponent implements OnInit {
   }
 
   selectPhoto(photo) {
-    alert(photo.name);
+    
     this.selectedPhoto = photo;
+  }
+
+  getUrlPhoto(photo: Photo){
+    return this.vehiculeService.getUrlPhoto(photo);
   }
 
 }
