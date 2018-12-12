@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AnnoncesService } from 'src/app/service/annonces-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Annonce } from 'src/app/model/Annonce';
-import { environment } from 'src/environments/environment';
+import { Photo } from 'src/app/model/Photo';
+import { VehiculeService } from 'src/app/service/vehicule.service';
 
 @Component({
   selector: 'app-annonce',
@@ -13,7 +14,7 @@ export class AnnonceComponent implements OnInit {
 
   annonce : Annonce;
 
-  constructor(private annonceService : AnnoncesService, private route: ActivatedRoute, private router : Router ){
+  constructor(private annonceService : AnnoncesService, private route: ActivatedRoute, private router : Router,private vehiculeService: VehiculeService ){
   }
 
   ngOnInit(){
@@ -35,8 +36,8 @@ export class AnnonceComponent implements OnInit {
     return num === 1 ? "madame" : "monsieur"
   }
 
-  getUrlPhoto(namePhoto : string){
-    return environment.imagesURL + namePhoto
+  getUrlPhoto(photo: Photo){
+    return this.vehiculeService.getUrlPhoto(photo);
   }
 
 }

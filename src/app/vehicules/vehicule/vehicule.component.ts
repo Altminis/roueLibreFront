@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { VehiculeService } from 'src/app/service/vehicule.service';
-import { environment } from 'src/environments/environment';
 import { AuthService } from 'src/app/service/auth-service.service';
 import { User } from 'src/app/model/User';
 import { Vehicule } from 'src/app/model/Vehicule';
+import { Photo } from 'src/app/model/Photo';
 
 @Component({
   selector: 'app-vehicule',
@@ -33,8 +33,8 @@ export class VehiculeComponent implements OnInit {
       } 
     )
   }
-  getUrlPhoto(namePhoto: string){
-    return environment.imagesURL + namePhoto;
+  getUrlPhoto(photo: Photo){
+    return this.vehiculeService.getUrlPhoto(photo);
   }
 
   deleteVehicule(){

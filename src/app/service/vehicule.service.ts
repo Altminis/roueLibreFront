@@ -33,13 +33,13 @@ export class VehiculeService {
 
   }
 
+  getUrlPhoto(photo: Photo){
+    const photoName = photo.name ? photo.name : photo;  
+    return environment.imagesURL + photoName;
+  }
+
   getAvailablePhotos(): Observable<Photo[]> {
-    return this.http.get<Photo[]>(environment.backURL + `/photos`).pipe(
-      map(photos => {
-        photos.forEach(photo => photo.name = environment.imagesURL + photo.name);
-        return photos;
-      })
-    );
+    return this.http.get<Photo[]>(environment.backURL + `/photos`);
   }
 
   

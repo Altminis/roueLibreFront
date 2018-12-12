@@ -3,7 +3,7 @@ import { Vehicule } from '../model/Vehicule';
 import { AuthService } from '../service/auth-service.service';
 import { User } from '../model/User';
 import { VehiculeService } from '../service/vehicule.service';
-import { environment } from 'src/environments/environment';
+import { Photo } from '../model/Photo';
 
 @Component({
   selector: 'app-vehicules',
@@ -24,8 +24,8 @@ checked = false;
    
   }
 
-  getUrlPhoto(namePhoto: string){
-    return environment.imagesURL + namePhoto;
+  getUrlPhoto(photo: Photo){
+    return this.vehiculeService.getUrlPhoto(photo);
   }
 
   
