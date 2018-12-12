@@ -26,7 +26,7 @@ export class AnnonceComponent implements OnInit {
     this.annonceService.getAnnonce(p).subscribe(
       (annonce: Annonce) => {
         this.annonce = annonce;
-        console.log(annonce)
+    
       } 
     )
   }

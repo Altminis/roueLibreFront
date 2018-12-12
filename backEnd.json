@@ -141,7 +141,7 @@
       "id": 2,
       "intitule": "trotinette motorisée",
       "marque": "michelin",
-      "userId": 2,
+      "userId": 1,
       "etat": {
         "id": 2,
         "intitule": "bon état"
@@ -193,6 +193,26 @@
       "titreMessage": "ca va?",
       "contenuMessage": "oui ",
       "id": 2
+    }
+  ],
+  "photos": [
+    {
+      "name": "trot.jpg"
+    },
+    {
+      "name": "velo.jpg"
+    },
+    {
+      "name": "velo2.jpg"
+    },
+    {
+      "name": "velo3.jpg"
+    },
+    {
+      "name": "velo4.jpg"
+    },
+    {
+      "name": "velo5.jpg"
     }
   ]
 }
