@@ -228,6 +228,20 @@
       "description": "sdfsdf",
       "photo": "http://localhost:3000/images/trot.jpg",
       "id": 3
+    },
+    {
+      "intitule": "RUFFAULT",
+      "marque": "Arnaud",
+      "description": "Nono",
+      "photo": "http://localhost:3000/images/velo.jpg",
+      "id": 4
+    },
+    {
+      "intitule": "RUFFAULT",
+      "marque": "Arnaud",
+      "description": "Mon new vélo",
+      "photo": "http://localhost:3000/images/trot.jpg",
+      "id": 5
     }
   ],
   "annonces": [

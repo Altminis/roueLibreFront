@@ -47,7 +47,7 @@ export class AddVehiculeComponent implements OnInit {
         description: this.descriptionCtrl.value,
         photo: this.selectedPhoto.name
     };
-    this.vehiculeService.addVehicule(this.vehicule).subscribe(() => alert("Vehicule added !"));
+    this.vehiculeService.addVehicule(this.vehicule).subscribe(() => this.router.navigate(['/myaccount']));
 
   }
 
