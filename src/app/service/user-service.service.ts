@@ -20,8 +20,8 @@ export class UserService {
     return this.http.get<User>(environment.backURL + '/users/' + id);
   }
 
-  addUser(user){
-    return this.http.post(environment.backURL + '/users', user);
+  addUser(user): Observable<User> {
+    return this.http.post<User>(environment.backURL + '/users', user);
   }
 
   deleteUserById(id : number) {

@@ -1,0 +1,12 @@
+<div class="detailVehicule">
+<h3>{{ vehicule.intitule }}</h3><br/><br/>
+<p>Titre: {{ vehicule.intitule }}</p>
+<p>Marque: {{ vehicule.marque }}</p>
+<p>Description: {{ vehicule.description }}</p>
+<img class="imgVehicule" [src]="getUrlPhoto(vehicule.photo)" />
+<br/><br/>
+
+<button mat-button mat-flat-button color="primary" (click)="deleteVehicule()">Supprimer</button>
+</div>
+
+

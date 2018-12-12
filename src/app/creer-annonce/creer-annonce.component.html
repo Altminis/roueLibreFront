@@ -1,9 +1,25 @@
 <h2>Créer une annonce</h2>
 <form (ngSubmit)="ajouterAnnonce()" [formGroup]="annonceForm">
+  <span>Du </span>
   <mat-form-field>
-    <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="debut">
+    <input matInput [matDatepicker]="picker" placeholder="Début de la location " formControlName="debut">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <span> au </span>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker2" placeholder="Fin de la location" formControlName="fin">
+    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+    <mat-datepicker #picker2></mat-datepicker>
+  </mat-form-field>
+
+  <mat-error *ngIf="annonceForm.dirty && annonceForm.hasError('matchingError')">Les dates ne sont pas valides</mat-error>
+  <br />
+  <label>Véhicule à louer:</label>
+  <mat-form-field>
+    <mat-select placeholder="Vehicule" disableRipple formControlName="vehicule">
+      <mat-option *ngFor="let vehicule of vehicules" [value]="vehicule.id">{{ vehicule.intitule }}</mat-option>
+    </mat-select>
   </mat-form-field>
   <button mat-button mat-flat-button color="primary" type="submit" [disabled]="annonceForm.invalid">Ajouter</button>
 </form>

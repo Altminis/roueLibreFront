@@ -94,7 +94,7 @@ export class SubscriptionComponent implements OnInit {
       this.userForm.get('adresse2').value,
       this.userForm.get('ville').value,
       this.userForm.get('codepostal').value,
-      this.userForm.get('pays').value)
+      this.userForm.get('pays').value);
       user.adresses = [adresse];
       console.log(user);
       this.userService.addUser(user).subscribe(_ => this.route.navigate(['/accueil']), error => console.log(error));

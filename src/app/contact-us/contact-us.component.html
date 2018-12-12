@@ -1,4 +1,4 @@
-<form class="formContainer" (ngSubmit)= "register()" [formGroup]= "formContact">
+<form class="formContainer" (ngSubmit)= "saveMessage()" [formGroup]= "formContact">
   <br />
   <h3 class="text-center">Nous contacter</h3>
   <br />
@@ -38,3 +38,4 @@
     <button type="submit" class="btn btn-primary" style="margin: auto;" [disabled]= "formContact.invalid">Envoyer</button>
   </div>
 </form>
+<p *ngIf="validationMessage">{{ validationMessage }}</p>
