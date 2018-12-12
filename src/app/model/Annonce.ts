@@ -3,8 +3,8 @@ import { User } from "./User";
 
 export class Annonce {
     id? : number
-    user : User
-    vehicule : Vehicule
+    userId : number
+    vehiculeId : number
     debut : Date
     fin : Date
 }
