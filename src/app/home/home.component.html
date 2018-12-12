@@ -1,13 +1,17 @@
 <div class="home">
-  <div class="container">
+  <div class="container nearYou">
+    <div>
+      <h3>Près de chez vous ! </h3>
+    </div>
     <div class="row ">
-      <div class="col-sm" *ngFor="let numero of numeros">
-        <div class="card border-light mb-3" style="max-width: 18rem;">
-          <div class="card-header">Pseudo</div>
-          <div class="card-body">
-            <img class="imgVelo" src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
-          alt="velo">
-          </div>
+      <div class="col-sm-6 col-md-4" *ngFor="let velo of velosTop3">
+        <div class="card" style="max-width: 18rem;">
+          <img class="imgVelo rounded mx-auto d-block img-thumbnail img-fluid" [src]="velo.veloPic" alt="velo">
+          <p class="pseudo">{{velo.pseudo}}</p>
+          <img [src]="velo.userPic" alt="" class="rounded-circle userPicture">
+        </div>
+        <div class="card-body">
+          <p class="card-text"></p>
         </div>
       </div>
     </div>
@@ -31,19 +35,25 @@
           </div>
         </div>
       </div>
+      <div class="container">
+          <div style="text-align: center;">
+            <a [routerLink]="['/subscription']"><button class="actionButton">Je veux m'inscrire</button></a>
+          </div>
+      </div>
     </div>
   </div>
   <div class="container announces">
-      <div class="row">
-        <div class="col-sm-8 col-md-4" *ngFor="let velo of velos">
-          <div class="card border-light mb-3" style="max-width: 18rem;">
-            <div class="card-header">Pseudo</div>
-            <div class="card-body">
-              <img class="imgVelo" [src]="velo"
-            alt="velo">
-            </div>
-          </div>
+    <div class="row">
+      <div class="col-sm-6 col-md-4" *ngFor="let velo of velos">
+        <div class="card" style="max-width: 18rem;">
+          <img class="imgVelo rounded mx-auto d-block img-thumbnail img-fluid" [src]="velo.veloPic" alt="velo" (click)="openDialog()">
+          <p class="pseudo">{{velo.pseudo}}</p>
+          <img [src]="velo.userPic" alt="" class="rounded-circle userPicture">
+        </div>
+        <div class="card-body">
+          <p class="card-text"></p>
         </div>
       </div>
     </div>
+  </div>
 </div>

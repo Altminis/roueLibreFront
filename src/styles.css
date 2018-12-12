@@ -1,23 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-#container {
-    min-height: 100%;
-    position: relative;
-    padding-bottom: 5%;
+body { 
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    }
+
+  
+
+
+#page-container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:"h"
+                        "c"
+                        "f";
 }
-footer {
-    background-color:#DCDCDC;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 0px;
-    position: absolute;
-    bottom: 0px;
-    }
 
-    .mat-tab-body{
-        height: 350px;
-    }
+#header-container {
+    grid-area: h;
+}
 
+#content-container {
+    grid-area: c;
+}
 
+#footer-container {
+    grid-area: f;
+}

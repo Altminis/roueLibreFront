@@ -27,11 +27,18 @@ import { ListeAnnoncesComponent } from './liste-annonces/liste-annonces.componen
 import { VehiculesComponent } from './vehicules/vehicules.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 
-import {MatListModule} from '@angular/material/list';
+
+import { AddVehiculeComponent } from './add-vehicule/add-vehicule.component';
+
+import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { AnnonceComponent } from './liste-annonces/annonce/annonce.component';
+import { CreerAnnonceComponent } from './creer-annonce/creer-annonce.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { AnnoncePopupComponent } from './annonce-popup/annonce-popup.component';
+import { MatDialogModule } from '@angular/material/dialog';
 import { VehiculeComponent } from './vehicules/vehicule/vehicule.component';
-import { AddVehiculeComponent } from './add-vehicule/add-vehicule.component';
 
 
 
@@ -53,7 +60,9 @@ import { AddVehiculeComponent } from './add-vehicule/add-vehicule.component';
     VehiculesComponent,
     VehiculeComponent,
     AnnonceComponent,
-    AddVehiculeComponent
+    AddVehiculeComponent,
+    CreerAnnonceComponent,
+    AnnoncePopupComponent
 
   ],
   imports: [
@@ -73,9 +82,13 @@ import { AddVehiculeComponent } from './add-vehicule/add-vehicule.component';
     MatSelectModule,
     MatTableModule,
     MatListModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatDialogModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [MatDatepickerModule],
+  bootstrap: [AppComponent],
+  entryComponents: [AnnoncePopupComponent]
 })
 export class AppModule { }

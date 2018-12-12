@@ -1,12 +1,21 @@
 <div *ngIf="annonce" class="d-flex justify-content-around align-items-center">
   <div>
+
+    <mat-card>
+      <h2>Période :</h2>
+      <mat-list role="list">
+        <mat-list-item role="listitem">A partir du {{ annonce.debut | date : 'shortDate' }}</mat-list-item>
+        <mat-list-item role="listitem">A partir du {{ annonce.fin | date : 'shortDate'}}</mat-list-item>
+      </mat-list>
+    </mat-card>
+
     <mat-card>
       <h2>Loueur :</h2>
       <mat-list role="list">
-        <mat-list-item role="listitem">Civilité : {{ getCivilite(annonce.vehicule.loueur.civilite) | titlecase }}
+        <mat-list-item role="listitem">Civilité : {{ getCivilite(annonce.user.civilite) | titlecase }}
         </mat-list-item>
-        <mat-list-item role="listitem">Pseudo : {{ annonce.vehicule.loueur.pseudo | titlecase}}</mat-list-item>
-        <mat-list-item role="listitem">Description : {{ annonce.vehicule.loueur.description }}</mat-list-item>
+        <mat-list-item role="listitem">Pseudo : {{ annonce.user.pseudo | titlecase}}</mat-list-item>
+        <mat-list-item role="listitem">Description : {{ annonce.user.description }}</mat-list-item>
       </mat-list>
     </mat-card>
 
@@ -22,7 +31,7 @@
     </mat-card>
   </div>
   <div>
-      <img [src] ="getUrlPhoto(annonce.vehicule.photo)">
+    <img [src]="getUrlPhoto(annonce.vehicule.photo)">
   </div>
 </div>
 <div *ngIf="!annonce">

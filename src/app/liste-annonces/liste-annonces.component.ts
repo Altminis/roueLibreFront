@@ -12,7 +12,7 @@ import { MatTableDataSource } from '@angular/material/table';
 export class ListeAnnoncesComponent implements OnInit {
 
   annonces : MatTableDataSource<Annonce>
-  displayedColumns: string[] = ['loueur', 'categorie', 'image', 'detail'];
+  displayedColumns: string[] = ['loueur', 'categorie', 'image', 'date', 'detail'];
 
   constructor(private annonceService : AnnoncesService) { }
 

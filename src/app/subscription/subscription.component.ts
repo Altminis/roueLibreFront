@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { UserService } from '../service/user-service.service';
 import { debounceTime } from 'rxjs/operators';
+import { User } from '../model/User';
+import { Adresse } from '../model/Adresse';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-subscription',
@@ -9,6 +12,8 @@ import { debounceTime } from 'rxjs/operators';
   styleUrls: ['./subscription.component.css']
 })
 export class SubscriptionComponent implements OnInit {
+
+  userForm: FormGroup;
 
   ville = new FormControl('');
   pays = new FormControl('');
@@ -29,7 +34,20 @@ export class SubscriptionComponent implements OnInit {
   password = new FormControl('');
 
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private fb: FormBuilder, private route: Router) { 
+    this.userForm = fb.group({
+      ville: this.ville,
+      pays: this.pays,
+      codepostal: this.codepostal,
+      adresse: this.adresse,
+      adresse2: this.adresse2,
+      email: this.email,
+      prenom: this.prenom,
+      nom: this.nom,
+      pseudo: this.pseudo,
+      password: this.password
+    })
+  }
 
   ngOnInit() {
   }
@@ -65,4 +83,22 @@ export class SubscriptionComponent implements OnInit {
       )
   }
 
+  inscription(){
+    if(this.userForm.valid){
+      const user: User = new User();
+      user.prenom = this.userForm.get('prenom').value;
+      user.nom = this.userForm.get('nom').value;
+      user.pseudo = this.userForm.get('pseudo').value;
+      user.mail = this.userForm.get('email').value;
+      const adresse = new Adresse(this.userForm.get('adresse').value,
+      this.userForm.get('adresse2').value,
+      this.userForm.get('ville').value,
+      this.userForm.get('codepostal').value,
+      this.userForm.get('pays').value)
+      user.adresses = [adresse];
+      console.log(user);
+      this.userService.addUser(user).subscribe(_ => this.route.navigate(['/accueil']), error => console.log(error));
+    }
+  }
+  
 }
