@@ -13,9 +13,9 @@ import { AuthService } from 'src/app/service/auth-service.service';
 export class ListMesLocationsComponent implements OnInit {
 
   annonces : MatTableDataSource<Annonce>
-  displayedColumns: string[] = ['vehicule', 'categorie', 'image', 'date'];
+  displayedColumns: string[] = ['vehicule', 'categorie', 'image', 'date', 'detail'];
 
-  constructor(private annonceService : AnnoncesService, private authService :AuthService) { }
+  constructor(private annonceService : AnnoncesService, private authService : AuthService) { }
 
   ngOnInit() {
     this.refreshAnnonces();

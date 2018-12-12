@@ -1,0 +1,25 @@
+<div>
+  <mat-card>
+    <h2>Période :</h2>
+    <mat-list role="list">
+      <mat-list-item role="listitem">A partir du {{ annonce.debut | date : 'shortDate' }}</mat-list-item>
+      <mat-list-item role="listitem">A partir du {{ annonce.fin | date : 'shortDate'}}</mat-list-item>
+    </mat-list>
+  </mat-card>
+
+  <mat-card>
+    <h2>Véhicule :</h2>
+    <mat-list role="list">
+      <mat-list-item role="listitem">Catégorie : {{ annonce.vehicule.categorie.intitule | titlecase }}</mat-list-item>
+      <mat-list-item role="listitem">Intitulé : {{ annonce.vehicule.intitule }}</mat-list-item>
+      <mat-list-item role="listitem">Marque : {{ annonce.vehicule.marque }}</mat-list-item>
+      <mat-list-item role="listitem">Etat : {{ annonce.vehicule.etat.intitule | titlecase }}</mat-list-item>
+      <mat-list-item role="listitem">Description : {{ annonce.vehicule.description }}</mat-list-item>
+    </mat-list>
+  </mat-card>
+</div>
+<div>
+  <img [src]="getUrlPhoto(annonce.vehicule.photo)">
+</div>
+
+<button mat-raised-button color="warn" (click)="supprimerAnnonce()">Supprimer l'annonce</button>

@@ -164,12 +164,29 @@
       "photo": "trot.jpg"
     },
     {
-      "intitule": "Test",
-      "marque": "test",
-      "description": "test",
-      "photo": "http://localhost:3000/images/velo.jpg",
+      "id": 3,
+      "intitule": "vélo steampunk",
+      "marque": "trek",
       "userId": 1,
-      "id": 3
+      "etat": {
+        "id": 2,
+        "intitule": "neuf"
+      },
+      "categorie": {
+        "id": 4,
+        "intitule": "vélo ",
+        "description": "vélo non motorisée"
+      },
+      "isAvailable": true,
+      "adresse": {
+        "adresseLigne1": "101 avenue du Pirée",
+        "adresseLigne2": "résidence le Moulin",
+        "ville": "Montpellier",
+        "codePostal": 34000,
+        "pays": "France"
+      },
+      "description": "Vélo steampunk trop cool de la mort qui tue",
+      "photo": "velo_steampunk.jpg"
     }
   ],
   "annonces": [
@@ -181,25 +198,18 @@
       "fin": 1545140358000
     },
     {
-      "id": 2,
-      "userId": 1,
-      "vehiculeId": 1,
-      "debut": 1547818758000,
-      "fin": 1549373958000
-    },
-    {
-      "debut": 1546297200000,
-      "fin": 1546729200000,
-      "userId": 1,
-      "vehiculeId": 1,
-      "id": 3
-    },
-    {
       "debut": 1543705200000,
       "fin": 1543791600000,
       "userId": 1,
       "vehiculeId": 1,
       "id": 4
+    },
+    {
+      "debut": 1545260400000,
+      "fin": 1545865200000,
+      "userId": 1,
+      "vehiculeId": 3,
+      "id": 5
     }
   ],
   "messages": [

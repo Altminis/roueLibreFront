@@ -15,6 +15,7 @@ import { AnnonceComponent } from "./liste-annonces/annonce/annonce.component";
 import { VehiculeComponent } from "./vehicules/vehicule/vehicule.component";
 import { AddVehiculeComponent } from "./add-vehicule/add-vehicule.component";
 import { CreerAnnonceComponent } from "./creer-annonce/creer-annonce.component";
+import { MaLocationComponent } from "./my-account/list-mes-locations/ma-location/ma-location.component";
 
 
 
@@ -27,15 +28,16 @@ const routes: Routes = [
     { path: 'modification', component: ModificationComponent, canActivate: [LoggedInGuard] },
     { path: 'contact-us', component: ContactUsComponent },
     { path: 'annonces', component: ListeAnnoncesComponent },
-    {path: "annonces/:id", component: AnnonceComponent},
+    { path: "annonces/:id", component: AnnonceComponent },
     { path: 'subscription', component: SubscriptionComponent },
     { path: '', component: HomeComponent },
     { path: 'myaccount/vehicules/:id', component: VehiculeComponent, canActivate: [LoggedInGuard] },
-    { path: 'addVehicule', component:AddVehiculeComponent, canActivate: [LoggedInGuard]},
+    { path: 'myaccount/annonces/:id', component: MaLocationComponent, canActivate: [LoggedInGuard] },
+    { path: 'addVehicule', component: AddVehiculeComponent, canActivate: [LoggedInGuard] },
     { path: 'myaccount/creer-annonce', component: CreerAnnonceComponent, canActivate: [LoggedInGuard] },
     { path: 'not-found', component: ErrorComponent },
     { path: '**', redirectTo: 'not-found' }
-    
+
 
 
 

@@ -40,6 +40,7 @@ import { AnnoncePopupComponent } from './annonce-popup/annonce-popup.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { VehiculeComponent } from './vehicules/vehicule/vehicule.component';
 import { ListMesLocationsComponent } from './my-account/list-mes-locations/list-mes-locations.component';
+import { MaLocationComponent } from './my-account/list-mes-locations/ma-location/ma-location.component';
 
 
 
@@ -64,7 +65,8 @@ import { ListMesLocationsComponent } from './my-account/list-mes-locations/list-
     AddVehiculeComponent,
     CreerAnnonceComponent,
     AnnoncePopupComponent,
-    ListMesLocationsComponent
+    ListMesLocationsComponent,
+    MaLocationComponent
 
   ],
   imports: [
