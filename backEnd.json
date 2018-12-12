@@ -141,7 +141,7 @@
       "id": 2,
       "intitule": "trotinette motorisée",
       "marque": "michelin",
-      "userId": 2,
+      "userId": 1,
       "etat": {
         "id": 2,
         "intitule": "bon état"
@@ -163,25 +163,12 @@
       "photo": "trot.jpg"
     },
     {
-      "intitule": "sdfsd",
-      "marque": "sdfsdf",
-      "description": "sdfsdf",
-      "photo": "http://localhost:3000/images/trot.jpg",
-      "id": 3
-    },
-    {
-      "intitule": "RUFFAULT",
-      "marque": "Arnaud",
-      "description": "Nono",
-      "photo": "http://localhost:3000/images/velo.jpg",
-      "id": 4
-    },
-    {
       "intitule": "RUFFAULT",
       "marque": "Arnaud",
       "description": "Mon new vélo",
-      "photo": "http://localhost:3000/images/trot.jpg",
-      "id": 5
+      "photo": "http://localhost:3000/images/velo.jpg",
+      "userId": 1,
+      "id": 3
     }
   ],
   "annonces": [
@@ -190,14 +177,14 @@
       "userId": 2,
       "vehiculeId": 2,
       "debut": 1544621958,
-      "fin" : 1545140358
+      "fin": 1545140358
     },
     {
       "id": 2,
       "userId": 1,
       "vehiculeId": 1,
       "debut": 1547818758,
-      "fin" : 1549373958
+      "fin": 1549373958
     }
   ],
   "messages": [
