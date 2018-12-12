@@ -161,6 +161,14 @@
       },
       "description": "super trottinette !!",
       "photo": "trot.jpg"
+    },
+    {
+      "intitule": "Test",
+      "marque": "test",
+      "description": "test",
+      "photo": "http://localhost:3000/images/velo.jpg",
+      "userId": 1,
+      "id": 3
     }
   ],
   "annonces": [
@@ -184,6 +192,13 @@
       "userId": 1,
       "vehiculeId": 1,
       "id": 3
+    },
+    {
+      "debut": 1543705200000,
+      "fin": 1543791600000,
+      "userId": 1,
+      "vehiculeId": 1,
+      "id": 4
     }
   ],
   "messages": [

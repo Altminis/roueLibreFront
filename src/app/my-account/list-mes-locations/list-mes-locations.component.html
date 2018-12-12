@@ -1,0 +1,28 @@
+
+<mat-card class="contact-list">
+    <table mat-table [dataSource]="annonces" matSort class="mat-elevation-z8">
+  
+      <ng-container matColumnDef="vehicule">
+        <th mat-header-cell *matHeaderCellDef> Vehicule </th>       
+        <td mat-cell *matCellDef="let annonce"> {{ annonce.vehicule.intitule | titlecase}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="categorie">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Catégorie </th>
+        <td mat-cell *matCellDef="let annonce"> {{ annonce.vehicule.categorie.intitule | uppercase}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="image">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Image </th>
+        <td mat-cell *matCellDef="let annonce"><img [src] ="getUrlPhoto(annonce.vehicule.photo)"> </td>
+      </ng-container>
+
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Période </th>
+        <td mat-cell *matCellDef="let annonce"> Du {{ annonce.debut | date : 'shortDate'}} au {{ annonce.fin | date : 'shortDate'}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </mat-card>

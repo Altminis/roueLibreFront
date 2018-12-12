@@ -26,6 +26,18 @@ export class AnnoncesService {
     return annonces as Observable<Annonce[]>;
   }
 
+  getAnnoncesByUser(id: number): Observable<Annonce[]> {
+    const annonces = this.http.get<Annonce[]>(environment.backURL + '/annonces?userId='+id+'&_expand=user&_expand=vehicule').pipe(
+      map(annonces => {
+        annonces.forEach(annonce => {
+          annonce['debut'] = new Date(+annonce['debut'])
+          annonce['fin'] = new Date(+annonce['fin'])
+        });
+        return annonces;
+      }));
+    return annonces as Observable<Annonce[]>;
+  }
+
   getAnnonce(id): Observable<Annonce> {
     const annonce = this.http.get<Object>(environment.backURL + '/annonces/' + id + '?_expand=user&_expand=vehicule').pipe(
       map(annonce => {
