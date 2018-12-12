@@ -21,6 +21,12 @@ export class CreerAnnonceComponent implements OnInit {
   finCtrl: FormControl;
   vehiculeCtrl: FormControl;
 
+  static isDateValid(group: FormGroup) {
+    const debut = group.get('debut').value;
+    const fin = group.get('fin').value;
+    return debut < fin ? null : { matchingError: true };
+  }
+
   constructor(private fb: FormBuilder,
     private authService: AuthService,
     private vehiculeService: VehiculeService,
@@ -33,7 +39,8 @@ export class CreerAnnonceComponent implements OnInit {
       debut: this.debutCtrl,
       fin: this.finCtrl,
       vehicule: this.vehiculeCtrl
-    })
+    },
+    { validator: CreerAnnonceComponent.isDateValid })
   }
 
   ngOnInit() {

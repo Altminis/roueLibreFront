@@ -12,6 +12,8 @@
     <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
     <mat-datepicker #picker2></mat-datepicker>
   </mat-form-field>
+
+  <mat-error *ngIf="annonceForm.dirty && annonceForm.hasError('matchingError')">Les dates ne sont pas valides</mat-error>
   <br />
   <label>Véhicule à louer:</label>
   <mat-form-field>
