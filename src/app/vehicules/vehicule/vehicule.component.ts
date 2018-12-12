@@ -36,4 +36,10 @@ export class VehiculeComponent implements OnInit {
   getUrlPhoto(namePhoto: string){
     return environment.imagesURL + namePhoto;
   }
+
+  deleteVehicule(){
+    this.vehiculeService.deleteVehculesById(this.vehicule.id).subscribe(
+      _=>this.router.navigate(['/myaccount'])
+    )
+  }
 }

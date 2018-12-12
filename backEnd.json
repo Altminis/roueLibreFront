@@ -161,14 +161,6 @@
       },
       "description": "super trottinette !!",
       "photo": "trot.jpg"
-    },
-    {
-      "intitule": "RUFFAULT",
-      "marque": "Arnaud",
-      "description": "Mon new vélo",
-      "photo": "http://localhost:3000/images/velo.jpg",
-      "userId": 1,
-      "id": 3
     }
   ],
   "annonces": [
